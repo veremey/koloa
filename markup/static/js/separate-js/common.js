@@ -311,7 +311,6 @@ function dotsStartscreenPosition(){
 
 findVideos();
 
-
 AOS.init({
 	initClassName: 'aos-init',
 	animatedClassName: 'aos-animate',

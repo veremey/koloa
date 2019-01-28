@@ -415,7 +415,7 @@ function initMap() {
 		zoom: 14,
 		center: centerMap
 	});
-	var image = '../static/img/content/icon-map.png';
+	var image = '../img/content/icon-map.png';
 	var marker = new google.maps.Marker({
 		position: uluru,
 		map: map,

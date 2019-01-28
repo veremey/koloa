@@ -1,0 +1,43 @@
+// File for sass-vars.
+$n: transparent
+$gold: #e1caae
+
+
+.icon-arrow
+	display: inline-block
+	vertical-align: top
+	height: 7px
+	width: 12px
+	position: absolute
+	top: 110%
+	left: 50%
+	fill: rgba(0, 0, 0, 0.3)
+	transform: translateX(-50%)
+	animation: down 1.4s infinite
+
+.icon-drizly
+	display: inline-block
+	vertical-align: top
+	width: 44px
+	height: 36px
+	background-image: url('../img/content/drizly.png')
+	background-size: 44px
+
+.arrow
+	&-left
+		display: inline-block
+		vertical-align: top
+		@include bg-svg($arrow-left)
+	&-right
+		display: inline-block
+		vertical-align: top
+		@include bg-svg($arrow-left)
+		+scale(-1)
+
+
+@keyframes down
+	0%
+		top: 110%
+	50%
+		top: 140%
+		fill: rgba(0, 0, 0, 0.8)

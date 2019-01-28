@@ -1,0 +1,610 @@
+*
+	box-sizing: border-box
+	outline: none
+	&:after,
+	&:before
+		box-sizing: inherit
+
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+html, body
+	height: 100%
+	background-color: #FFF
+body
+	color: rgba(0, 0, 0, .7)
+	font-size: 16px
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	text-size-adjust: none
+	+rr
+
+a
+	text-decoration: none
+	outline: none
+
+button
+	background-color: $n
+	border: none
+	outline: none
+	padding: 0
+	cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+p
+	margin: 0
+
+.layout
+	width: 100%
+	max-width: 1800px
+	margin: 0 auto
+	&_wide
+		height: 100vh
+		+rh(720)
+			height: auto
+
+.section
+	position: relative
+	height: 100vh
+	z-index: 2
+	+r(1000)
+		height: auto
+	+rh(720)
+		// height: auto
+		min-height: 100vh
+		padding: 20px 0
+	&__bg
+		+coverdiv
+		overflow: hidden
+		z-index: -1
+		background: url('../img/content/bg.png') 0 0 no-repeat
+		background-size: cover
+		&_bg
+			+vcenter
+		&_corner
+			&-top
+				position: absolute
+				top: -10%
+				right: -6%
+				height: 80vh
+				@include bg-svg($vazon);
+				+tr(1s)
+				+scale(-1)
+				+r(1024)
+					right: -15%
+				+r(800)
+					right: -26%
+				+r(650)
+					right: -57%
+					top: -17%
+			&-bottom
+				position: absolute
+				left: -6%
+				bottom: -10%
+				height: 80vh
+				@include bg-svg($vazon);
+				+tr(1s)
+				+scale(1)
+				+r(1024)
+					left: -15%
+				+r(800)
+					left: -26%
+				+r(650)
+					left: -57%
+					bottom: -34%
+	&_product
+		padding: 20px 0 60px
+		+g(#f4f7f8 50%, #fff 50%)
+		+r(1024)
+			height: auto
+		.title__section
+			padding-top: 60px
+			margin-bottom: 2em
+		.layout
+			+r(1024)
+				height: auto
+	&_map
+		height: auto
+		padding-bottom: 80px
+		.title__section
+			text-transform: uppercase
+			margin-bottom: 2em
+			+r(800)
+				padding: 0 20px
+	&_buy
+		.title__section
+			text-transform: uppercase
+			margin-bottom: .8em
+		.btn
+			height: 56px
+			padding: 0 20px
+			background-color: #fff
+			+rb
+			i
+				margin-right: 16px
+			&:hover
+				i
+					filter: drop-shadow(0px 0px 6px#fff)
+
+.wall
+	position: relative
+	height: 100%
+	width: 100%
+	max-width: 1800px
+	margin: 0 auto
+	display: flex
+	align-items: center
+	+r(1000)
+		flex-direction: column
+	&__play
+		display: inline-block
+		vertical-align: top
+		height: 80px
+		width: 80px
+		margin-bottom: 6px
+		transform: scale(.8)
+		+tr(.4s)
+	&__video
+		cursor: pointer
+		&:hover
+			.wall__play
+				transform: scale(1)
+				#triangle
+					fill: #ffc555
+				#oval
+					stroke: #ffc555
+	&__picture
+		position: absolute
+		top: 10%
+		bottom: 10%
+		width: 58.33%
+		overflow: hidden
+		+r(1000)
+			position: relative
+			top: 0
+			bottom: auto
+			height: 50vh
+			width: 100%
+			overflow: hidden
+			order: -1
+
+		&_left
+			left: 0
+		&_right
+			right: 0
+		&_wide
+			right: 0
+			left: 0
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		min-width: 100%
+		min-height: 100%
+		transform: translate(-50%, -50%)
+	&__content
+		position: relative
+		display: inline-block
+		width: 100%
+		max-width: 535px
+		background-color: #fff
+		padding: 56px 40px
+		text-align: center
+		z-index: 2
+		+r(1000)
+			top: -45px
+			padding: 30px
+		+r(650)
+			top: -45px
+			padding: 30px 20px
+		&-1
+			background: url('../img/content/wall-bg-01.svg') 0% 0% no-repeat, #fff url('../img/content/wall-bg-02.svg') 100% 100% no-repeat
+			background-size: 100px
+		&-2
+			background: url('../img/content/wall-bg-03.svg') 100% 0% no-repeat, #fff url('../img/content/wall-bg-04.svg') 0% 100% no-repeat
+			background-size: 100px
+		&.slick-slider
+			.title__section
+				margin-bottom: 2em
+		.title__section
+			letter-spacing: 0
+			margin-bottom: .8em
+	&__arrows
+		position: absolute
+		top: 50%
+		right: 0
+		width: 57px
+		font-size: 0
+		+try(-50%)
+	&__arrow
+		display: inline-block
+		vertical-align: top
+		width: 57px
+		height: 57px
+		background-color: #fff
+		+tr(.4s)
+		&:hover
+			background-color: #f6f6f6
+	&_right
+		justify-content: flex-end
+		.wall__content
+			margin-right: 50%
+			+trx(90%)
+			+r(1000)
+				margin: 0 auto
+				transform: none
+		.wall__picture
+			left: 0
+	&_left
+		justify-content: flex-start
+		.wall__content
+			margin-left: 50%
+			+trx(-90%)
+			+r(1000)
+				margin: 0 auto
+				transform: none
+		.wall__picture
+			right: 0
+	&_wide
+		.wall__picture
+			width: 100%
+			right: 0
+			left: 0
+	.btn-border
+		width: 100%
+		height: 56px
+		max-width: 200px
+		+rb
+	.slick-list,
+	.slick-track
+		height: 100%
+
+.coins
+	width: 100%
+	max-width: 880px
+	margin: 0 auto
+	// padding: 60px 0
+	text-align: center
+	+r(1000)
+		padding: 0px 20px 40px
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		padding: 0
+		margin: 0 0 40px
+		font-size: 0
+		list-style: none
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin: 10px 5px
+		img
+			width: 76px
+			height: 76px
+	.desc__r
+		font-size: 20px
+		color: #515252
+	a.desc__r
+		+tr(.4s)
+		&:hover
+			color: $gold
+
+.products
+	padding: 0
+	margin: 0
+	list-style: none
+	&__item
+		position: relative
+		padding: 0
+		margin: 0
+		list-style: none
+		font-size: 0
+		&:hover
+			.products__info
+				transform: rotateX(0deg)
+		&.slick-current
+			.products__frame
+				opacity: 1
+				transform: translate3d(-50%, 0, 0) scale(1)
+
+	&__gallery
+		position: relative
+		text-align: center
+		padding-bottom: 40px
+	&__img
+		display: inline-block!important
+		vertical-align: top
+	&__name
+		font-size: 20px
+		color: #000
+		+pbi
+		text-align: center
+	&__frame
+		position: absolute
+		bottom: 0
+		left: 50%
+		width: 76%
+		opacity: 0
+		transform: translate3d(-50%, 0, 0) scale(.6)
+		+tr(.4s)
+		z-index: -1
+		+r(900)
+			max-width: 280px
+		&:after
+			content: ''
+			display: block
+			padding-bottom: 100%
+			border: 8px solid #bba181
+	&__info
+		position: absolute
+		bottom: 14px
+		left: 0
+		width: 100%
+		background-color: #fff
+		padding: 40px 20px
+		box-shadow: 0 0 4px rgba(0, 0, 0, .2)
+		+tr(.4s)
+		transform: rotateX(90deg)
+		transform-origin: 100% 100%
+		transition: .4s .8s
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			+trx(-50%)
+			+arr(24, 12, #fff, b)
+	&__text
+		margin-bottom: 20px
+	&__btns
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(650)
+			flex-wrap: wrap
+	&__arrows
+		position: absolute
+		top: 42%
+		left: 0
+		right: 0
+		+try(-42%)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		pointer-events: none
+		z-index: 1000
+	&__arrow
+		display: inline-block
+		vertical-align: top
+		background-color: #FFFFFF
+		width: 56px
+		height: 56px
+		pointer-events: visiblestroke
+		cursor: pointer
+		+tr(.4s)
+		&:hover
+			background-color: #b0b0b0
+	.btn
+		width: 48%
+		height: 58px
+		line-height: 1.4em
+		text-transform: uppercase
+		+rb
+		+r(650)
+			width: 100%
+			margin: 8px
+	.btn-prod
+		background-color: #F4F4F4
+	.btn-gold
+		background-color: #ECDFCC
+	.desc__r
+		line-height: 1.4em
+		color: rgba(0, 0, 0, .7)
+
+.map
+	position: relative
+	width: 100%
+	max-width: 880px
+	margin: 0 auto 80px
+	&__wrap
+		position: absolute
+		top: 40px
+		left: 50%
+		right: 0
+		width: 100%
+		max-width: 350px
+		height: 100%
+		+trx(-50%)
+	&__form
+		margin: 0 auto
+	&__fieldset
+		padding: 0
+		font-size: 0
+		border: none
+	&__zip
+		display: inline-block
+		vertical-align: top
+		height: 56px
+		width: calc(100% - 128px)
+		line-height: 48px
+		padding: 4px 14px
+		font-size: 18px
+		color: #000
+		border: none
+		border-radius: 0
+	&__btn
+		display: inline-block
+		vertical-align: top
+		height: 48px
+		width: 128px
+		background-color: #000
+		color: #fff
+		+anb
+	&__location
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background-color: #fff
+		padding: 35px 35px 20px
+	.title__g
+		margin-bottom: 1.2em
+	.desc__rl
+		margin-bottom: .8em
+	.btn
+		height: 56px
+
+.ppp
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 1000
+	visibility: hidden
+	&.is-active
+		visibility: visible
+	&__screen
+		+coverdiv
+		background-color: rgba(0, 0, 0, .8)
+	&__body
+		display: none
+		+vcenter
+		z-index: 10
+		&.is-active
+			display: block
+	.close
+		top: -50px
+
+.video
+	position: relative
+	width: 90%
+	height: 0
+	margin: 0 auto
+	padding-bottom: 56.25%
+	background: #fff
+	&__body
+		width: 100%
+		max-width: 940px
+	&__media
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: none
+	&__btn
+		position: absolute
+		top: 50%
+		left: 50%
+		height: 160px
+		border: none
+		transform: translate(-50%, -50% )
+		outline: none
+		#triangle
+			fill: #E6D3BA
+			+tr(.4s)
+		#oval
+			stroke: #E5D1B7
+			+tr(.4s)
+
+.video:hover .wall__play,
+.wall__play:focus,
+	transform: scale(1)
+	#triangle
+		fill: #ffc555
+	#oval
+		stroke: #ffc555
+
+.slick-custom__dots,
+.wall_left .wall__dots
+	position: absolute
+	left: 28%
+	transform: translate(-50%, -10px)
+	// +try(-10px)
+	display: inline-block
+	vertical-align: top
+	z-index: 1
+	+tr(.4s)
+	.slick-dots
+		display: inline-block
+		vertical-align: top
+		padding: 0
+		margin: 0 0 0 -20px
+		list-style: none
+		li
+			display: inline-block
+			vertical-align: top
+			margin-left: 20px
+			padding: 4px
+			font-size: 0
+			width: 0
+			height: 0
+			background-color: $gold
+			// box-shadow: none
+			box-shadow: 0px 0px 0px 0px $gold
+			+rotate(45)
+			+tr(.4s)
+			cursor: pointer
+		.slick-active
+			box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px $gold
+
+.wall_left .wall__dots
+	left: 50%
+	z-index: 10
+	transform: translate(-50%, 0px)
+
+.slick-custom__dots
+	+r(1000)
+		left: 50%
+
+#map
+	height: 80vh
+	max-height: 445px
+
+.aos-init
+	.wall
+		overflow: hidden
+		&_right
+			.wall__picture
+				transition: .4s .2s
+				transform: translateX(-90%) scale(.9)
+		&_left
+			.wall__picture
+				transition: .4s .2s
+				transform: translateX(90%) scale(.9)
+
+.aos-animate
+	.wall
+		&_right
+			.wall__picture
+				transform: translateX(0%) scale(1)
+		&_left
+			.wall__picture
+				transform: translateX(0%) scale(1)
+
+

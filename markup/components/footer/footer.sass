@@ -1,0 +1,187 @@
+
+.footer
+	margin-top: 80px
+	position: relative
+	display: flex
+	justify-content: center
+	+r(1000)
+		margin-top: 30px
+	&__container
+		display: flex
+		justify-content: space-between
+		// flex-wrap: wrap
+		width: 100%
+		max-width: 1800px
+		padding: 0 10% 40px 3%
+		+r(1024)
+			padding: 0 20px 40px 20px
+		+r(1000)
+			flex-direction: column
+			align-items: center
+			max-width: 650px
+	&__column
+		&_logo
+			display: inline-block
+			vertical-align: top
+			width: 25%
+			+r(1000)
+				width: 100%
+				text-align: center
+			img
+				width: 90%
+				max-width: 250px
+		&_center
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			flex: 0 0 50%
+			padding-right: 10%
+			+r(1600)
+				padding-right: 3%
+			+r(1000)
+				flex-direction: column-reverse
+				align-items: center
+				flex: 0 0 auto
+				padding: 0
+				width: 100%
+		&_right
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			flex: 0 0 25%
+			+try(-20px)
+			+r(1600)
+				flex: 0 0 16%
+			+r(1000)
+				flex: 0 0 auto
+				width: 100%
+			.btn
+				height: 26px
+				margin-right: 0
+	&__nav
+		display: flex
+		justify-content: space-between
+		margin-bottom: 80px
+		+r(1000)
+			width: 100%
+		+r(800)
+			flex-wrap: wrap
+		&_column
+			+r(800)
+				width: 100%
+				margin-bottom: 30px
+	&__list
+		padding: 0
+		margin: 0
+		font-size: 0
+		list-style: none
+	&__item
+		display: block
+	&__link
+		color: #6e6e6e
+		font-size: 16px
+		line-height: 2
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			+trx(-50%)
+			height: 1px
+			width: 0
+			background-color: #6e6e6e
+			+tr(.3s)
+		&:hover
+			&:after
+				left: 0
+				+trx(0)
+				width: 100%
+	.title__f
+		margin-bottom: 1.2em
+	.desc__or
+		max-width: 280px
+		color: #268276
+
+.connect
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	max-width: 350px
+	+r(1000)
+		width: 100%
+	&__form
+		display: block
+		width: 100%
+		+r(1000)
+			margin-bottom: 30px
+	&__fieldset
+		padding: 0
+		font-size: 0
+		border: none
+	&__mail
+		display: inline-block
+		vertical-align: top
+		height: 48px
+		width: calc(100% - 130px)
+		border: none
+		border-radius: 0
+		line-height: 48px
+		padding: 4px 14px
+		font-size: 16px
+		color: #000
+		background-color: #F5F5F6
+	&__btn
+		display: inline-block
+		width: 128px
+		height: 48px
+		background-color: #000
+		color: #fff
+		+anb
+
+.insta
+	+r(1000)
+		max-width: 280px
+		margin: 0 auto 30px
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 15px
+	&__user
+		display: flex
+		align-items: center
+		&_pic
+			display: inline-block
+			vertical-align: top
+			margin-right: 20px
+	&__body
+		display: grid
+		grid-template-columns: 94px 94px 94px
+		grid-template-rows: 94px 94px 94px
+		grid-gap: 10px
+		font-size: 0
+		+r(1600)
+			grid-template-columns: 72px 72px 72px
+			grid-template-rows: 72px 72px 72px
+			grid-gap: 6px
+		+r(1000)
+			width: 100%
+			grid-template-columns: 88px 88px 88px
+			grid-template-rows: 88px 88px 88px
+	&__pic
+		width: 100%
+		overflow: hidden
+
+	.title__f
+		display: inline-block
+		margin-bottom: 0
+	.btn-blue
+		text-transform: none
+		background-color: #3595EF
+		color: #fff
+		padding: 5px 12px
+		letter-spacing: 0
+		border-radius: 4px
+
+

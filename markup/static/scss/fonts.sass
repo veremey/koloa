@@ -1,0 +1,165 @@
++font('Roboto-Black', 'Roboto-Black')
++font('Roboto-Bold', 'Roboto-Bold')
++font('Roboto-Light', 'Roboto-Light')
++font('Roboto-Medium', 'Roboto-Medium')
++font('Roboto-Regular', 'Roboto-Regular')
++font('Roboto-Thin', 'Roboto-Thin')
++font('karla-bold', 'karla-bold')
++font('karla-regular', 'karla-regular')
++font('playfairdisplay-bold', 'playfairdisplay-bold')
++font('playfairdisplay-bolditalic', 'playfairdisplay-bolditalic')
++font('playfairdisplay-regular', 'playfairdisplay-regular')
++font('ce76800d', 'ce76800d')
+
+=ch
+	font-family: 'ce76800d', Arial, sans-serif
+=pr
+	font-family: 'playfairdisplay-regular', Arial, sans-serif
+=pbi
+	font-family: 'playfairdisplay-bolditalic', Arial
+=pb
+	font-family: 'playfairdisplay-bold', Arial, sans-serif
+=kr
+	font-family: 'karla-regular', Arial, sans-serif
+=kb
+	font-family: 'karla-bold', Arial, sans-serif
+=rt
+	font-family: 'Roboto-Thin', Arial, sans-serif
+=rr
+	font-family: 'Roboto-Regular', Arial, sans-serif
+=rm
+	font-family: 'Roboto-Medium', Arial, sans-serif
+=rl
+	font-family: 'Roboto-Light', Arial, sans-serif
+=rb
+	font-family: 'Roboto-Bold', Arial, sans-serif
+=rbl
+	font-family: 'Roboto-Black', Arial, sans-serif
+
+
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 40px
+	padding: 13px 20px
+	margin: 0 auto
+	text-transform: uppercase
+	font-size: 12px
+	color: #323232
+	letter-spacing: 2px
+	text-transform: uppercase
+	&-border
+		border: 3px solid #000
+		+anft
+	&-play
+		position: absolute
+		top: 50%
+		right: 36%
+		z-index: 3
+		display: inline-block
+		vertical-align: top
+		height: 160px
+		display: flex
+		flex-direction: column
+		transform: translate(-36%, -50%)
+		+r(1000)
+			right: 50%
+			transform: translate(50%, -50%)
+		p
+			color: #fff
+			+tr(.4s)
+		#triangle
+			fill: #E6D3BA
+			+tr(.4s)
+		#oval
+			stroke: #E5D1B7
+			+tr(.4s)
+		&:hover
+			p
+				color: #E6D3BA
+
+.title
+	&__section
+		position: relative
+		text-align: center
+		font-size: 40px
+		color: #000
+		letter-spacing: 2px
+		line-height: 1.2
+		+ch
+		+r(650)
+			font-size: 32px
+		span
+			color: #bba181
+	&_dots
+		position: absolute
+		top: 110%
+		left: 50%
+		display: inline-block
+		vertical-align: top
+		width: 6px
+		height: 6px
+		background-color: #e1caae
+		+rotate(45)
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 20px
+			left: 0
+			display: inline-block
+			vertical-align: top
+			width: 6px
+			height: 6px
+			background-color: #e1caae
+			transform: translateX(-20px)
+		&:after
+			top: -20px
+			transform: translateX(20px)
+	&__g
+		font-size: 20px
+		line-height: 1.3
+		color: #D4BFA3
+		+pb
+		+r(650)
+			font-size: 18px
+	&__pbi
+		font-size: 20px
+		line-height: 1.3
+		color: #000
+		+pbi
+		+r(650)
+			font-size: 18px
+	&__f
+		font-size: 20px
+		color: #000
+		+pb
+		+r(650)
+			font-size: 18px
+
+.desc
+	&__r
+		font-size: 18px
+		+rr
+	&__rl
+		font-size: 18px
+		color: #000
+		+rl
+	&__pbi
+		font-size: 16px
+		color: #525252
+		+pbi
+	&__f
+		color: #6e6e6e
+		font-size: 16px
+		line-height: 2
+		margin-bottom: 2em
+	&__or
+		font-size: 16px
+		line-height: 2
+		color: #D4C0A4
+		+rb
+
+
+

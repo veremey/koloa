@@ -1,0 +1,190 @@
+.logo
+	font-size: 24px
+	white-space: nowrap
+	color: rgba(0, 0, 0, .7)
+	text-transform: uppercase
+	margin: 0
+	line-height: .9
+	+ch
+	+tr(.4s)
+	+r(400)
+		font-size: 16px
+	&:hover
+		color: rgba(0, 0, 0, 1)
+
+.header
+	position: absolute
+	top: 0
+	left: 50%
+	+trx(-50%)
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 96%
+	max-width: 1300px
+	padding: 20px 40px
+	z-index: 10
+	+r(1220)
+		left: 0
+		width: 100%
+		transform: none
+		padding: 40px 20px
+		// overflow: hidden
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex: 0 0 70%
+		+r(1220)
+			position: absolute
+			top: 0
+			left: 100%
+			width: 0%
+			flex-direction: column
+			justify-content: center
+			flex: 0 0 auto
+			overflow: hidden
+	&__btns
+		+r(650)
+			text-align: center
+	.btn
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		width: 150px
+		height: 40px
+		margin-left: 20px
+		+r(650)
+			width: 240px
+			margin: 10px auto
+	.btn-white
+		color: #000
+		+ana
+		+r(1440)
+			background-color: #fff
+	.btn-black
+		background: #000
+		color: #fff
+		+anb
+		+r(1220)
+			border: 1px solid #fff
+
+.trigger,
+.close
+	position: absolute
+	top: 20px
+	right: 20px
+	width: 44px
+	height: 44px
+	background-color: #000
+	display: none
+	cursor: pointer
+	+r(1220)
+		display: inline-block
+		vertical-align: top
+	&:hover
+		.trigger__item,
+		.close__item
+			&::before
+				bottom: 13px
+			&::after
+				top: 8px
+	&.is-active
+		z-index: 1
+		.trigger__item,
+		.close__item
+			display: block
+			width: 36px
+			height: 5px
+			position: relative
+			top: 20px
+			background-color: #fff
+			transition: all 0.3s ease-out
+			transform: rotate(225deg)
+			&::before
+				bottom: 0
+			&::after
+				transform: rotate(90deg)
+				top: -5px
+			&::before
+				bottom: 0
+			&::after
+				top: -5px
+		& + .header__wrap
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			background-color: #000
+	&__item
+		display: block
+		width: 36px
+		height: 5px
+		position: absolute
+		top: 20px
+		left: 4px
+		background-color: #fff
+		transition: all 0.3s ease-out
+		&::after
+			position: relative
+			display: block
+			content: ' '
+			top: 5px
+			width: 36px
+			height: 5px
+			background-color: #fff
+			transition: all 0.3s ease-out
+		&::before
+			position: relative
+			display: block
+			content: ' '
+			bottom: 10px
+			width: 36px
+			height: 5px
+			background-color: #fff
+			transition: all 0.3s ease-out
+
+.nav
+	&__list
+		padding: 0
+		margin: 0
+		list-style: none
+		+r(1220)
+			margin-bottom: 40px
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin-left: 40px
+		+r(1220)
+			display: block
+			text-align: center
+			margin-bottom: 14px
+			margin-left: 0
+	&__link
+		display: inline-block
+		position: relative
+		font-size: 12px
+		color: #323232
+		letter-spacing: 2px
+		text-transform: uppercase
+		+r(1220)
+			color: #fff
+			font-size: 14px
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			height: 1px
+			width: 0
+			background-color: #323232
+			+tr(.3s)
+			+r(1220)
+				background-color: #fff
+		&:hover
+			&:after
+				left: 0
+				width: 100%
+

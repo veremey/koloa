@@ -85,12 +85,13 @@ p
 		&_bg
 			+vcenter
 		&_corner
+
 			&-top
 				position: absolute
 				top: -10%
 				right: -6%
 				height: 80vh
-				@include bg-svg($vazon);
+				// @include bg-svg($vazon)
 				+tr(1s)
 				+scale(-1)
 				+r(1024)
@@ -105,7 +106,7 @@ p
 				left: -6%
 				bottom: -10%
 				height: 80vh
-				@include bg-svg($vazon);
+				// @include bg-svg($vazon)
 				+tr(1s)
 				+scale(1)
 				+r(1024)
@@ -302,9 +303,11 @@ p
 		display: inline-block
 		vertical-align: top
 		margin: 10px 5px
+		font-size: 0
 		img
 			width: 76px
 			height: 76px
+			border-radius: 76px
 	.desc__r
 		font-size: 20px
 		color: #515252
@@ -606,5 +609,36 @@ p
 		&_left
 			.wall__picture
 				transform: translateX(0%) scale(1)
+	// #vazon
+	// 	.st2
+	// 	.st1,
+	// 	.st3,
+	// 	.st4,
+	// 	.st5
+	// 		opacity: 0
+	// 		// transform: translateX(0%) scale(1) rotate(0deg)
+	// 		// opacity: 1
 
+	// 	.obj-1,
+	// 	.obj-2
+	// 		transform: translateX(0) scale(1) rotate(0deg)
+	// 		opacity: 1
+
+// #vazon
+// 	.st2,
+// 		opacity: 0
+// 	.st3
+// 	.st1,
+// 	.st3,
+// 	.st4,
+// 	.st5,
+// 		// transition: .1s .2s
+// 		transform: translateX(-100%) scale(.5) rotate(45deg)
+// 		opacity: 0
+
+// 	.obj-1,
+// 	.obj-2
+// 		// transition: .1s .2s
+// 		transform: translateX(-100%) scale(.5) rotate(45deg)
+// 		opacity: 0
 

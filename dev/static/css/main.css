@@ -894,11 +894,21 @@ template {
 .arrow-left {
   display: inline-block;
   vertical-align: top;
+  background-image: url("../img/svg-sprite/sprite.svg");
+  background-position: -4px -4px;
+  width: 24px;
+  height: 14px;
+  background-repeat: no-repeat;
 }
 
 .arrow-right {
   display: inline-block;
   vertical-align: top;
+  background-image: url("../img/svg-sprite/sprite.svg");
+  background-position: -4px -4px;
+  width: 24px;
+  height: 14px;
+  background-repeat: no-repeat;
   -webkit-transform: scale(-1);
           transform: scale(-1);
 }
@@ -1902,6 +1912,17 @@ p {
   visibility: visible;
 }
 
+.ppp.is-active .close {
+  display: block;
+  right: 45px;
+}
+
+@media only screen and (max-width: 650px) {
+  .ppp.is-active .close {
+    right: 30px;
+  }
+}
+
 .ppp__screen {
   position: absolute;
   top: 0;
@@ -2056,6 +2077,40 @@ p {
   max-height: 445px;
 }
 
+.startscreen__gallery {
+  overflow: hidden;
+}
+
+.startscreen__gallery:before {
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
+  -webkit-transform: translate(-250%, -50%) rotate(50deg);
+          transform: translate(-250%, -50%) rotate(50deg);
+}
+
+.startscreen__gallery:after {
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
+  padding-top: 8px;
+  -webkit-transform: translate(0%, -250%) rotate(50deg);
+          transform: translate(0%, -250%) rotate(50deg);
+}
+
+.startscreen__gallery.slick-slider {
+  overflow: hidden;
+}
+
+.startscreen__gallery.slick-slider:before {
+  -webkit-transform: translate(0%, -50%) rotate(0deg);
+          transform: translate(0%, -50%) rotate(0deg);
+}
+
+.startscreen__gallery.slick-slider:after {
+  padding-top: 8px;
+  -webkit-transform: translate(0%, -50%) rotate(0deg);
+          transform: translate(0%, -50%) rotate(0deg);
+}
+
 .aos-init .wall {
   overflow: hidden;
 }
@@ -2074,14 +2129,100 @@ p {
           transform: translateX(90%) scale(0.9);
 }
 
+.aos-init .wall__text {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+}
+
+.aos-init .slick-dots {
+  opacity: 0;
+  -webkit-transition: .4s 2s;
+  transition: .4s 2s;
+}
+
+.aos-init .startscreen .startscreen__box {
+  -webkit-transition: .8s 1s;
+  transition: .8s 1s;
+  opacity: 0;
+}
+
+.aos-init .startscreen .title__section {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+  -webkit-transition: .8s .8s;
+  transition: .8s .8s;
+}
+
+.aos-init .startscreen .startscreen__text {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+  -webkit-transition: .8s 1.2s;
+  transition: .8s 1.2s;
+}
+
+.aos-init .startscreen .btn {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+  -webkit-transition: .8s 1.5s;
+  transition: .8s 1.5s;
+}
+
+.aos-init .title__section {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+  -webkit-transition: .8s .8s;
+  transition: .8s .8s;
+}
+
 .aos-animate .wall_right .wall__picture {
-  -webkit-transform: translateX(0%) scale(1);
-          transform: translateX(0%) scale(1);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .aos-animate .wall_left .wall__picture {
-  -webkit-transform: translateX(0%) scale(1);
-          transform: translateX(0%) scale(1);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.aos-animate .wall__text {
+  -webkit-transition: .8s 1s;
+  transition: .8s 1s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.aos-animate .slick-dots {
+  -webkit-transition: .4s 2s;
+  transition: .4s 2s;
+  opacity: 1;
+}
+
+.aos-animate .startscreen__box {
+  -webkit-transition: .8s .8s;
+  transition: .8s .8s;
+  opacity: 1;
+}
+
+.aos-animate .title__section {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: .8s .8s;
+  transition: .8s .8s;
+}
+
+.aos-animate .startscreen__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: .8s 1.2s;
+  transition: .8s 1.2s;
 }
 
 .anim-top-w {
@@ -3054,6 +3195,20 @@ p {
   }
 }
 
+.startscreen__gallery:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 50%;
+  display: block;
+  padding-bottom: 100%;
+  border-top: 8px solid #bba181;
+  border-bottom: 8px solid #bba181;
+  z-index: -1;
+}
+
 .startscreen__gallery:after {
   content: '';
   position: absolute;
@@ -3061,11 +3216,10 @@ p {
   left: 0;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   display: block;
   padding-bottom: 100%;
-  border: 8px solid #bba181;
+  border-left: 8px solid #bba181;
+  border-right: 8px solid #bba181;
   z-index: -1;
 }
 
@@ -3148,6 +3302,121 @@ p {
   color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
   font-family: 'playfairdisplay-bolditalic', Arial;
+}
+
+#vazon .st1,
+#vazon .st2,
+#vazon .st3,
+#vazon .st4,
+#vazon .st5 {
+  opacity: 1;
+}
+
+#vazon .st0 {
+  -webkit-filter: url(#a);
+          filter: url(#a);
+}
+
+#vazon .st1 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #172228;
+}
+
+#vazon .st2 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #172D37;
+}
+
+#vazon .st3 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #17353C;
+}
+
+#vazon .st4 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #173F47;
+}
+
+#vazon .st5 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #172F38;
+}
+
+#vazon .st6 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #193837;
+}
+
+#vazon .st7 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #1E4A49;
+}
+
+#vazon .st8 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #426054;
+}
+
+#vazon .st9 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #8B9268;
+}
+
+#vazon .st10 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #771F1B;
+}
+
+#vazon .st11 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #BB3636;
+}
+
+#vazon .st12 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #E17453;
+}
+
+#vazon .st13 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #DC494A;
+}
+
+#vazon .st14 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #E8A074;
+}
+
+#vazon .st15 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #10302F;
+}
+
+#vazon .st16 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #5E815E;
+}
+
+#vazon .st17 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #ABAA1E;
 }
 
 /*# sourceMappingURL=main.css.map */

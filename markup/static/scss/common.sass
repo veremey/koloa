@@ -491,6 +491,11 @@ p
 	visibility: hidden
 	&.is-active
 		visibility: visible
+		.close
+			display: block
+			right: 45px
+			+r(650)
+				right: 30px
 	&__screen
 		+coverdiv
 		background-color: rgba(0, 0, 0, .8)
@@ -589,6 +594,29 @@ p
 	height: 80vh
 	max-height: 445px
 
+
+
+
+
+.startscreen__gallery
+	overflow: hidden
+	&:before
+		transition: 1s 1s
+		transform: translate(-250%, -50%) rotate(50deg)
+	&:after
+		transition: 1s 1s
+		padding-top: 8px
+		transform: translate(0%, -250%) rotate(50deg)
+
+.startscreen__gallery.slick-slider
+	overflow: hidden
+	&:before
+		transform: translate(0%, -50%) rotate(0deg)
+	&:after
+		padding-top: 8px
+		transform: translate(0%, -50%) rotate(0deg)
+
+
 .aos-init
 	.wall
 		overflow: hidden
@@ -600,15 +628,64 @@ p
 			.wall__picture
 				transition: .4s .2s
 				transform: translateX(90%) scale(.9)
+		&__text
+			transform: translateY(10px)
+			opacity: 0
+
+	.slick-dots
+		opacity: 0
+		transition: .4s 2s
+
+	.startscreen
+		.startscreen__box
+			transition: .8s 1s
+			opacity: 0
+		.title__section
+			+try(-30px)
+			opacity: 0
+			transition: .8s .8s
+		.startscreen__text
+			+try(-30px)
+			opacity: 0
+			transition: .8s 1.2s
+		.btn
+			+try(-30px)
+			opacity: 0
+			transition: .8s 1.5s
+
+	.title__section
+		+try(-30px)
+		opacity: 0
+		transition: .8s .8s
 
 .aos-animate
 	.wall
 		&_right
 			.wall__picture
-				transform: translateX(0%) scale(1)
+				transform: translateX(0)
 		&_left
 			.wall__picture
-				transform: translateX(0%) scale(1)
+				transform: translateX(0)
+		&__text
+			transition: .8s 1s
+			transform: translateY(0px)
+			opacity: 1
+	.slick-dots
+		transition: .4s 2s
+		opacity: 1
+
+	.startscreen__box
+		transition: .8s .8s
+		opacity: 1
+	.title__section
+		+try(0)
+		opacity: 1
+		transition: .8s .8s
+	.startscreen__text
+		+try(0)
+		opacity: 1
+		transition: .8s 1.2s
+
 	// #vazon
 	// 	.st2
 	// 	.st1,

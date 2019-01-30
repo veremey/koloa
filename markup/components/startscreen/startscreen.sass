@@ -34,6 +34,19 @@
 		+r(1024)
 			margin-bottom: 30px
 			min-width: 260px
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			left: 0
+			right: 0
+			top: 50%
+			// transform: translateY(-50%)
+			display: block
+			padding-bottom: 100%
+			border-top: 8px solid #bba181
+			border-bottom: 8px solid #bba181
+			z-index: -1
 		&:after
 			content: ''
 			position: absolute
@@ -41,10 +54,11 @@
 			left: 0
 			right: 0
 			top: 50%
-			transform: translateY(-50%)
+			// transform: translateY(-50%)
 			display: block
 			padding-bottom: 100%
-			border: 8px solid #bba181
+			border-left: 8px solid #bba181
+			border-right: 8px solid #bba181
 			z-index: -1
 		&_content
 			display: flex

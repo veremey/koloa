@@ -269,11 +269,9 @@ function slickOnInit(el){
 }
 
 function dotsPosition(el){
-	var $titleHeight = + $(el).find('.slick-current').find('.title__section').height();
 	var $offsetSliderTop = + $(el).find('.wall__content').position().top;
-	var $offsetSliderTitleTop = + $(el).find('.title__section').position().top;
-	var $offsetTop = $offsetSliderTitleTop +  $offsetSliderTop;
-	var $dotPositionTop =  + $offsetTop + $titleHeight;
+	var $offsetSliderTextTop = + $(el).find('.slick-current').find('.wall__text').position().top;
+	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop + 10;
 
 	var $width = (+ $(el).find('.wall__content').outerWidth()) / 2;
 	var $offsetLeft = + $(el).find('.wall__content').offset().left;
@@ -282,7 +280,7 @@ function dotsPosition(el){
 	var dots = $(el).find('.slick-current').parents('.wall').find('.wall__dots');
 	dots.css({
 						'left' : $positionLeft + 'px',
-						'top' : $dotPositionTop + 70 + 'px'
+						'top' : $offsetTop  + 'px'
 						});
 }
 

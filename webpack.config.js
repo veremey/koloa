@@ -19,6 +19,10 @@ let rules = [
         test: /\.js$/,
         loader: 'source-map-loader',
         enforce: 'pre'
+    },
+    {
+        test: /\.glsl$/,
+        loader: 'webpack-glsl-loader'
     }
 ];
 let plugins = [
@@ -83,6 +87,10 @@ if (tars.config.js.useBabel) {
             test: /\.js$/,
             loader: 'babel-loader',
             include: /markup/
+        },
+        {
+            test: /\.glsl$/,
+            loader: 'webpack-glsl-loader'
         }
     );
 }

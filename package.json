@@ -9,7 +9,8 @@
     "@babel/preset-env": "^7.2.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "webpack-glsl-loader": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,5 +1,6 @@
 
 .startscreen
+	margin-top: 0
 	+r(1024)
 		min-height: 100vh
 	&__layout
@@ -92,11 +93,14 @@
 	.btn
 		width: 200px
 		height: 56px
+		+rb
 		+r(650)
 			background-color: rgba(255, 255, 255, .8)
 	.title
 		&__section
 			margin-bottom: 1.6em
+			font-size: 48px
+			letter-spacing: 0.05em
 		&_dots
 			top: 120%
 

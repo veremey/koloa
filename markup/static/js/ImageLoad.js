@@ -6,7 +6,7 @@ export default class ImageLoad {
   constructor($wrapper) {
 
   	this.wrapper = $wrapper;
-  	this.width = $wrapper.width();
+  	this.width = $wrapper.height() * .72;
   	this.height = $wrapper.height();
   	this.src = $wrapper.data('src');
   	this.mouseOn = false;
@@ -42,7 +42,8 @@ export default class ImageLoad {
   	this.bg.position.y = 0;
   	this.container.addChild(this.bg);
 
-  	this.displacementSprite = PIXI.Sprite.fromImage('static/img/content/displacement.jpg');
+    this.displacementSprite = PIXI.Sprite.fromImage('static/img/content/displacement.jpg');
+
   	this.displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
   	this.displacementFilter = new PIXI.filters.DisplacementFilter(
   	  this.displacementSprite

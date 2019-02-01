@@ -1,35 +1,49 @@
 .logo
-	font-size: 24px
+	font-size: 30px
 	white-space: nowrap
 	color: rgba(0, 0, 0, .7)
 	text-transform: uppercase
 	margin: 0
 	line-height: .9
+	letter-spacing: .1em
 	+ch
 	+tr(.4s)
-	+r(400)
+	// font-weight: 800
+	+r(450)
 		font-size: 16px
 	&:hover
 		color: rgba(0, 0, 0, 1)
 
 .header
-	position: absolute
-	top: 0
-	left: 50%
-	+trx(-50%)
+	position: fixed
 	display: flex
 	align-items: center
 	justify-content: space-between
-	width: 96%
-	max-width: 1300px
+	top: 0
+	left: 0
+	width: 100%
 	padding: 20px 40px
-	z-index: 10
+	z-index: 100
+	+tr(.4s)
 	+r(1220)
-		left: 0
-		width: 100%
-		transform: none
 		padding: 40px 20px
-		// overflow: hidden
+	.layout
+		display: flex
+		align-items: center
+		justify-content: space-between
+		// width: 96%
+		max-width: 1300px
+		z-index: 10
+		+tr(.4s)
+
+	&.is-sticky
+		background-color: rgba(255, 255, 255, 1)
+		box-shadow: 0 0 4px rgba(0, 0, 0, .4)
+		padding: 6px 20px
+		+r(1220)
+			padding: 16px 20px
+			.trigger
+				top: 7px
 	&__wrap
 		display: flex
 		align-items: center
@@ -72,7 +86,7 @@
 .trigger,
 .close
 	position: absolute
-	top: 20px
+	top: 30px
 	right: 20px
 	width: 44px
 	height: 44px

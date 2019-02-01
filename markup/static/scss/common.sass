@@ -64,13 +64,18 @@ p
 	max-width: 1800px
 	margin: 0 auto
 	&_wide
+		position: relative
 		height: 100vh
-		+rh(720)
+		+rh(680)
 			height: auto
+		.section__bg
+			background: $n
+			z-index: 1
 
 .section
 	position: relative
 	height: 100vh
+	margin: 20px 0
 	z-index: 2
 	+r(1000)
 		height: auto
@@ -91,38 +96,39 @@ p
 			&-top
 				position: absolute
 				top: -10%
-				right: -6%
+				right: 0
 				height: 80vh
 				// @include bg-svg($vazon)
 				+tr(1s)
-				+scale(-1)
+				// +scale(-1)
 				+r(1024)
-					right: -15%
+					// right: -15%
 				+r(800)
-					right: -26%
+					// right: -26%
 				+r(650)
-					right: -57%
+					// right: -57%
 					top: -17%
+				&.is-reversed
+					+scale(-1)
 			&-bottom
 				position: absolute
-				left: -6%
+				left: 0
 				bottom: -10%
 				height: 80vh
 				// @include bg-svg($vazon)
 				+tr(1s)
 				+scale(1)
 				+r(1024)
-					left: -15%
+					// left: -15%
 				+r(800)
-					left: -26%
+					// left: -26%
 				+r(650)
-					left: -57%
+					// left: -57%
 					bottom: -34%
 	&_product
 		padding: 20px 0 60px
-		+g(#f4f7f8 50%, #fff 50%)
-		+r(1024)
-			height: auto
+		+g(#FAFBFC 50%, #fff 50%)
+		height: auto
 		.title__section
 			padding-top: 60px
 			margin-bottom: 2em
@@ -158,6 +164,7 @@ p
 	width: 100%
 	max-width: 1800px
 	margin: 0 auto
+	padding: 20px 0
 	display: flex
 	align-items: center
 	+r(1000)
@@ -181,8 +188,8 @@ p
 					stroke: #ffc555
 	&__picture
 		position: absolute
-		top: 10%
-		bottom: 10%
+		top: 0%
+		bottom: 0%
 		width: 58.33%
 		overflow: hidden
 		+r(1000)
@@ -289,7 +296,7 @@ p
 	width: 100%
 	max-width: 880px
 	margin: 0 auto
-	// padding: 60px 0
+	padding: 60px 0 0
 	text-align: center
 	+r(1000)
 		padding: 0px 20px 40px
@@ -597,9 +604,6 @@ p
 	max-height: 445px
 
 
-
-
-
 .startscreen__gallery
 	overflow: hidden
 	&:before
@@ -633,6 +637,12 @@ p
 		&__text
 			transform: translateY(10px)
 			opacity: 0
+		&__content-1
+			background: url(../img/content/wall-bg-01.svg) -30% -30% no-repeat, #fff url(../img/content/wall-bg-02.svg) 130% 130% no-repeat
+			transition: .4s 1.8s
+		&__content-2
+			background: url(../img/content/wall-bg-03.svg) 130% 0% no-repeat, #fff url(../img/content/wall-bg-04.svg) 0% 130% no-repeat
+			transition: .4s 1.8s
 
 	.slick-dots
 		opacity: 0
@@ -672,6 +682,10 @@ p
 			transition: .8s 1s
 			transform: translateY(0px)
 			opacity: 1
+		&__content-1
+			background: url(../img/content/wall-bg-01.svg) 0% 0% no-repeat, #fff url(../img/content/wall-bg-02.svg) 100% 100% no-repeat
+		&__content-2
+			background: url(../img/content/wall-bg-03.svg) 100% 0% no-repeat, #fff url(../img/content/wall-bg-04.svg) 0% 100% no-repeat
 	.slick-dots
 		transition: .4s 2s
 		opacity: 1

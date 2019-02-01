@@ -61,8 +61,19 @@ $(window).on('resize', function() {
 	 dotsPosition('.wall-01');
 	 dotsPosition('.wall-02');
 	 dotsStartscreenPosition();
-	});
+});
 
+$(window).on('scroll', function() {
+	stickyHeader();
+});
+
+function stickyHeader() {
+	if($(window).scrollTop() > 20){
+		$('.header').addClass('is-sticky');
+	} else {
+		$('.header').removeClass('is-sticky');
+	}
+}
 
 function openPPP () {
 	var pppName = $(this).data('ppp');

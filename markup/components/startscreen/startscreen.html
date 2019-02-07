@@ -1,6 +1,6 @@
 
 
-<div class="section startscreen"  data-aos="fade-right"  data-aos-duration="0"  data-aos-offset="20" data-aos-delay="0" >
+<div class="section startscreen is-animated" >
 
 	{{>vazon/vazon}}
 
@@ -12,89 +12,24 @@
 			<!-- </div> -->
 			<div class="startscreen__box">
 				<div class="startscreen__box_item">
-					<h2 class="title__section" role="heading" aria-level="3" >
+					<h2 class="title__section" role="heading" aria-level="3"  data-stagger='30'>
 						Premium<br/><span>Hawaiian</span> rum
-						<em class="title_dots"></em>
+						<em class="title_dots"  ></em>
 					</h2>
-					<div class="startscreen__text">
+					<div class="startscreen__text"  data-stagger='30'>
 						<p class="desc__r">A drink is not just a drink when it reflects the history and flavor of a place.</p>
 					</div>
-					<a href="#" class="btn btn-border">LEarn more</a>
-				</div>
-				<div class="startscreen__box_item">
-					<h2 class="title__section" role="heading" aria-level="3" >
-						Premium<br/><span>Hawaiian</span> rum
-						<em class="title_dots"></em>
-					</h2>
-					<div class="startscreen__text">
-						<p class="desc__r">A drink is not just a drink when it reflects the history and flavor of a place.</p>
-					</div>
-					<a href="#" class="btn btn-border">LEarn more</a>
-				</div>
-				<div class="startscreen__box_item">
-					<h2 class="title__section" role="heading" aria-level="3" >
-						Premium<br/><span>Hawaiian</span> rum
-						<em class="title_dots"></em>
-					</h2>
-					<div class="startscreen__text">
-						<p class="desc__r">A drink is not just a drink when it reflects the history and flavor of a place.</p>
-					</div>
-					<a href="#" class="btn btn-border">LEarn more</a>
+					<a href="#" class="btn btn-border"  data-stagger='30'>LEarn more</a>
 				</div>
 			</div>
-			<div class="startscreen__gallery">
-				<div class="startscreen__gallery_item">
-					<div class="startscreen__gallery_content">
-						<img src="static/img/content/rum-01.png" alt="Spice Rum" class="startscreen__gallery_img">
-						<p class="desc__pbi">Spice Rum</p>
-
-						<div class="startscreen__arrows">
-							<button class="startscreen__arrow startscreen__arrow_left">
-								<i class="arrow-left"></i>
-							</button>
-							<button class="startscreen__arrow startscreen__arrow_right">
-								<i class="arrow-right"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="startscreen__gallery_item">
-					<div class="startscreen__gallery_content">
-						<img src="static/img/content/rum-02.png" alt="Spice Rum" class="startscreen__gallery_img">
-						<p class="desc__pbi">Coconut Rum</p>
-
-						<div class="startscreen__arrows">
-							<button class="startscreen__arrow startscreen__arrow_left">
-								<i class="arrow-left"></i>
-							</button>
-							<button class="startscreen__arrow startscreen__arrow_right">
-								<i class="arrow-right"></i>
-							</button>
-
-						</div>
-					</div>
-				</div>
-				<div class="startscreen__gallery_item">
-					<div class="startscreen__gallery_content">
-						<img src="static/img/content/rum-03.png" alt="Spice Rum" class="startscreen__gallery_img">
-						<p class="desc__pbi">White Rum</p>
-
-						<div class="startscreen__arrows">
-							<button class="startscreen__arrow startscreen__arrow_left">
-								<i class="arrow-left"></i>
-							</button>
-							<button class="startscreen__arrow startscreen__arrow_right">
-								<i class="arrow-right"></i>
-							</button>
-						</div>
-					</div>
-				</div>
+			<div class="startscreen__gallery"  data-stagger='30'>
+				{{> startscreenBottle/startscreenBottle}}
 			</div>
 		</div>
 
 	</div>
 
-	<button class="scrolldown js-next-section">
+	<button class="scrolldown js-next-section"  data-stagger='30'>
 		Scroll down
 		<svg  class="icon-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 444.819 444.819" style="enable-background:new 0 0 444.819 444.819;" xml:space="preserve">
 		<g>

@@ -1,0 +1,17 @@
+{{#each startscreenBottle.bottle}}
+	<div class="startscreen__gallery_item">
+		<div class="startscreen__gallery_content">
+			<img src={{picture}} alt={{text}} class="startscreen__gallery_img">
+			<p class="desc__pbi">{{text}}</p>
+
+			<div class="startscreen__arrows">
+				<button class="startscreen__arrow startscreen__arrow_left">
+					<i class="arrow-left"></i>
+				</button>
+				<button class="startscreen__arrow startscreen__arrow_right">
+					<i class="arrow-right"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+{{/each}}

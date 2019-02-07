@@ -272,7 +272,7 @@ function slickOnInit(el){
 function dotsPosition(el){
 	var $offsetSliderTop = + $(el).find('.wall__content').position().top;
 	var $offsetSliderTextTop = + $(el).find('.slick-current').find('.wall__text').position().top;
-	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop + 10;
+	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop + 40;
 
 	var $width = (+ $(el).find('.wall__content').outerWidth()) / 2;
 	var $offsetLeft = + $(el).find('.wall__content').offset().left;

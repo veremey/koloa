@@ -10,7 +10,7 @@
 	+tr(.4s)
 	// font-weight: 800
 	+r(450)
-		font-size: 16px
+		font-size: 18px
 	&:hover
 		color: rgba(0, 0, 0, 1)
 
@@ -44,6 +44,9 @@
 			padding: 16px 20px
 			.trigger
 				top: 7px
+				+r(450)
+					top: 4px
+					height: 40px
 	&__wrap
 		display: flex
 		align-items: center
@@ -96,6 +99,9 @@
 	+r(1220)
 		display: inline-block
 		vertical-align: top
+	+r(450)
+		height: 40px
+
 	&:hover
 		.trigger__item,
 		.close__item
@@ -141,6 +147,8 @@
 		left: 4px
 		background-color: #fff
 		transition: all 0.3s ease-out
+		+r(450)
+			top: 18px
 		&::after
 			position: relative
 			display: block

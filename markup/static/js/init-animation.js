@@ -32,6 +32,21 @@ $(function () {
 
 		var selfTriggeredElems = {
 			el1: {
+				selector: '.logo',
+				triggerHook: 0.7,
+				class: 'is-animated'
+			},
+			el2: {
+				selector: '[data-stagger]',
+				triggerHook: 0.7,
+				class: 'is-animated'
+			}
+		};
+
+		initGlobalAnimations( 'header', selfTriggeredElems );
+
+		var selfTriggeredElems = {
+			el1: {
 				selector: '[data-stagger]',
 				triggerHook: 0.7,
 				class: 'is-animated'

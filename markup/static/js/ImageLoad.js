@@ -34,7 +34,7 @@ export default class ImageLoad {
 
   startAnimation() {
   	let that = this;
-  	console.log(this.img);
+  	// console.log(this.img);
   	this.bg = PIXI.Sprite.fromImage(that.src);
   	this.bg.width = this.width;
   	this.bg.height = this.height;

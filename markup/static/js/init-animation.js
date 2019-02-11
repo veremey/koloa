@@ -70,12 +70,7 @@ $(function () {
 				selector: '[data-stagger]',
 				triggerHook: 0.8,
 				class: 'is-animated'
-			},
-			el4: {
-				selector: '.wall__dots',
-				triggerHook: 0.8,
-				class: 'is-animated'
-			},
+			}
 		};
 
 		initGlobalAnimations( 'section', selfTriggeredElems );

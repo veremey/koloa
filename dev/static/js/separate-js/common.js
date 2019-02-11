@@ -10,8 +10,8 @@ $(function () {
 	slickAfterChange('.wall-02');
 	slickOnInit('.wall-01');
 	slickOnInit('.wall-02');
-	dotsPosition('.wall-01');
-	dotsPosition('.wall-02');
+	// dotsPosition('.wall-01');
+	// dotsPosition('.wall-02');
 
 	// setTimeout(function() {
 	// 	dotsStartscreenPosition();
@@ -272,13 +272,15 @@ function slickOnInit(el){
 function dotsPosition(el){
 	var $offsetSliderTop = + $(el).find('.wall__content').position().top;
 	var $offsetSliderTextTop = + $(el).find('.slick-current').find('.wall__text').position().top;
-	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop + 40;
+	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop - 0;
 
 	var $width = (+ $(el).find('.wall__content').outerWidth()) / 2;
 	var $offsetLeft = + $(el).find('.wall__content').offset().left;
 	var $positionLeft = $offsetLeft + $width;
 
 	var dots = $(el).find('.slick-current').parents('.wall').find('.wall__dots');
+
+	dots.addClass('js-position');
 	dots.css({
 						'left' : $positionLeft + 'px',
 						'top' : $offsetTop  + 'px'

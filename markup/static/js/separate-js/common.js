@@ -10,12 +10,6 @@ $(function () {
 	slickAfterChange('.wall-02');
 	slickOnInit('.wall-01');
 	slickOnInit('.wall-02');
-	// dotsPosition('.wall-01');
-	// dotsPosition('.wall-02');
-
-	// setTimeout(function() {
-	// 	dotsStartscreenPosition();
-	// }, 300);
 
 	var openPpp = $('.js-ppp');
 	openPpp.on('click', openPPP );
@@ -259,6 +253,7 @@ function generateUrl(id){
 
 function slickAfterChange(el){
 	$(el).find('.wall__content').on('afterChange', function(slick, currentSlide){
+
 		dotsPosition(el);
 	});
 }
@@ -270,21 +265,10 @@ function slickOnInit(el){
 }
 
 function dotsPosition(el){
-	var $offsetSliderTop = + $(el).find('.wall__content').position().top;
-	var $offsetSliderTextTop = + $(el).find('.slick-current').find('.wall__text').position().top;
-	var $offsetTop = $offsetSliderTextTop +  $offsetSliderTop - 0;
+	var $eq = $(el).find('.slick-current').data('slick-index');
+	var dots = $(el).find('.slick-current').find('.wall__dots');
 
-	var $width = (+ $(el).find('.wall__content').outerWidth()) / 2;
-	var $offsetLeft = + $(el).find('.wall__content').offset().left;
-	var $positionLeft = $offsetLeft + $width;
-
-	var dots = $(el).find('.slick-current').parents('.wall').find('.wall__dots');
-
-	dots.addClass('js-position');
-	dots.css({
-						'left' : $positionLeft + 'px',
-						'top' : $offsetTop  + 'px'
-						});
+	dots.find('li').eq($eq).addClass('slick-active');
 }
 
 function slickStartscreenInit(){
@@ -293,36 +277,7 @@ function slickStartscreenInit(){
 	});
 }
 
-// function dotsStartscreenPosition(){
-// 	var $titleHeight = + $('.startscreen__box').find('.slick-current').find('.title__section').height();
-// 	var $offsetSliderTop = + $('.startscreen__box').position().top;
-// 	var $offsetSliderTitleTop = + $('.startscreen__box').find('.slick-current').find('.title__section').position().top;
-// 	var $offsetTop = $offsetSliderTitleTop +  $offsetSliderTop;
-// 	var $dotPositionTop =  + $offsetTop + $titleHeight;
-
-// 	var $width = (+ $('.startscreen__box').outerWidth()) / 2;
-// 	var $offsetLeft = + $('.startscreen__box').offset.left;
-// 	var $positionLeft = $(document).width() < 1000 ? (($offsetLeft + $width )/2) : ($offsetLeft + $width ) - 20;
-
-// 	var dots = $('.slick-custom__dots');
-// 	dots.css({
-// 						'left': $positionLeft  + 'px',
-// 						'top': $dotPositionTop + 30 + 'px' });
-// }
-
 findVideos();
-
-
-//TODO
-// AOS.init({
-// 	initClassName: 'aos-init',
-// 	animatedClassName: 'aos-animate',
-// 	disable: function(){
-// 		if($(document).width() > 1000){
-// 			return true;
-// 		}
-// 	}
-// });
 
 
 // MAP

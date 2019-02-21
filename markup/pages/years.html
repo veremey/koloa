@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page">
+
+	<div class="page__wrapper ">
+		<div class="section section_screen mod-flex is-animated">
+			<div class="section__bg " aria-hidden="true" >
+
+				<picture class="video__picture">
+					<source srcset="https://i.ytimg.com/vi_webp/3fx3IDazJXI/maxresdefault.webp" type="image/webp">
+					<img src="https://i.ytimg.com/vi/3fx3IDazJXI/maxresdefault.jpg" alt="Aloha from Kōloa Rum" class="video__media">
+				</picture>
+				<!-- <iframe width="560" height="315"  src="https://www.youtube.com/embed/nwe76N7J0EI?rel=0&autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+				<iframe width="1173" height="660" class="video__iframe" src="https://www.youtube.com/embed/3fx3IDazJXI?rel=0&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			</div>
+			<div class="layout mod-flex">
+				<div class="aloha">
+					<h2 class="aloha__title">Aloha!</h2>
+					<h1 class="title__section">Are you 21 <br> years or older?</h1>
+					<div class="aloha__btns">
+						<a href="/" class="btn">yes</a>
+						<a href="#" class="btn">no</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+	//* --- youtube video ---*/
+
+
+		var player;
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {
+			player.playVideo();
+		}
+		var done = false;
+	function onPlayerStateChange(event) {
+		if (event.data == YT.PlayerState.PLAYING && !done) {
+			setTimeout(stopVideo, 6000);
+			done = true;
+		}
+	}
+	function stopVideo() {
+		player.stopVideo();
+	}
+
+	player = new YT.Player('player', {
+		height: '100%',
+		width: '100%',
+		videoId: '3fx3IDazJXI',
+		events: {
+			'onReady': playVideo,
+			'onStateChange': onPlayerStateChange
+		}
+	});
+
+</script> -->
+
+</body>
+
+</html>

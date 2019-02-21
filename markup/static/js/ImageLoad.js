@@ -1,6 +1,3 @@
-import * as PIXI from 'pixi.js';
-import {TimelineMax} from 'gsap';
-
 
 export default class ImageLoad {
   constructor($wrapper) {

@@ -3,15 +3,6 @@ import ImageLoader from './ImageLoad';
 import initanimation from './init-animation';
 
 
-
-//TODO
-// import Animator from './animator';
-// import Paginator from './paginator';
-
-
-// gotoSlide animations
-	// let p = new Paginator();
-
 // pixi animations
 var targets = document.querySelectorAll('.js-loadme');
 

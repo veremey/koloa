@@ -1,1 +1,15 @@
-<svg width="12" height="24" viewBox="0 0 12 24" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Koloa" transform="translate(-1040 -5683)" fill="#333742"><g id="Footer" transform="translate(10 5443)"><g id="facebook-(1)" transform="translate(1030 240)"><path d="M7.5,8.25 L7.5,5.25 C7.5,4.422 8.172,3.75 9,3.75 L10.5,3.75 L10.5,0 L7.5,0 C5.0145,0 3,2.0145 3,4.5 L3,8.25 L0,8.25 L0,12 L3,12 L3,24 L7.5,24 L7.5,12 L10.5,12 L12,8.25 L7.5,8.25 Z" id="Path"/></g></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="24px" viewBox="0 0 12 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Koloa" transform="translate(-1040.000000, -5683.000000)" fill="#333742">
+            <g id="Footer" transform="translate(10.000000, 5443.000000)">
+                <g id="facebook-(1)" transform="translate(1030.000000, 240.000000)">
+                    <path d="M7.5,8.25 L7.5,5.25 C7.5,4.422 8.172,3.75 9,3.75 L10.5,3.75 L10.5,0 L7.5,0 C5.0145,0 3,2.0145 3,4.5 L3,8.25 L0,8.25 L0,12 L3,12 L3,24 L7.5,24 L7.5,12 L10.5,12 L12,8.25 L7.5,8.25 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,7 +1,4 @@
-// import ScrollMagic from 'ScrollMagic';
 
-require(['ScrollMagic'], function(ScrollMagic) {
-});
 
 
 export default class Animation {

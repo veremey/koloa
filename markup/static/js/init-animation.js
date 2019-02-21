@@ -1,5 +1,6 @@
 
-import {TimelineMax} from 'gsap';
+
+
 
 function initGlobalAnimations(container, selfTriggeredElems) {
 	var controller = new ScrollMagic.Controller();

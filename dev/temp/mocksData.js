@@ -32,6 +32,9 @@ __pages: [{
                 name: 'index',
                 href: 'index.html'
              },{
+                name: 'visit',
+                href: 'visit.html'
+             },{
                 name: 'years',
                 href: 'years.html'
              }]

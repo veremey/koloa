@@ -1,0 +1,32 @@
+{{#each this}}
+	<li class="infobox">
+		<div class="infobox__face">
+			<div class="infobox__pic">
+				<img src="{{img}}" alt="{{boxTitle}}" class="infobox__img">
+				<div class="infobox__info"><!--   --></div>
+			</div>
+			<h2 class="title__pbi">{{{boxTitle}}}</h2>
+		</div>
+		{{#if footerItem}}
+
+			<ul class="infobox__list">
+				{{#each footerItem}}
+					<li class="infobox__item" data-info="infobox__info" data-parent="infobox">
+						<h3 class="title__pb">{{footerTitle}}</h3>
+						<div class="infobox__hidden" data-text>
+							<h4 class="title__pb">{{footerTitle}}</h4>
+							<div class="infobox__hidden_text">{{{footerDesc}}}</div>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		{{/if}}
+
+		{{#if footerText}}
+			<div class="infobox__footer">
+				<p class="desc__wb">{{{footerText}}}</p>
+			</div>
+		{{/if}}
+
+	</li>
+{{/each}}

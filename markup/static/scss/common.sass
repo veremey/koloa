@@ -69,6 +69,12 @@ p
 		.section__bg
 			background: $n
 			z-index: 1
+	&_narrow
+		position: relative
+		max-width: 1100px
+	&_small
+		max-width: 1020px
+		padding: 0 20px
 
 .section
 	position: relative
@@ -139,6 +145,7 @@ p
 		height: auto
 		padding-top: 80px
 		padding-bottom: 80px
+		background-color: #fcfdfd
 		+r(1000)
 			padding-top: 20px
 		.title__section
@@ -167,6 +174,12 @@ p
 	&_first
 		padding-top: 80px
 		margin: 0
+	&_autoheight
+		height: auto
+		.layout
+			height: auto
+			&_wide
+				height: auto
 
 .video
 	&__iframe,
@@ -232,6 +245,11 @@ p
 		min-width: 100%
 		min-height: 100%
 		transform: translate(-50%, -50%)
+	&__info
+		width: 100%
+		max-width: 1100px
+		padding: 0 20px
+		margin: 0 auto 60px
 	&__content
 		position: relative
 		display: inline-block
@@ -248,7 +266,7 @@ p
 			top: -45px
 			padding: 30px 20px
 		&-1
-			background: url('../img/content/wall-bg-01.svg') 0% 0% no-repeat, #fff url('../img/content/wall-bg-02.svg') 100% 100% no-repeat
+			background: url('../img/content/wall-bg-01.svg') 0% 0% no-repeat, #fff url('../img/content/wall-bg-021.svg') 100% 100% no-repeat
 			background-size: 100px
 		&-2
 			background: url('../img/content/wall-bg-03.svg') 100% 0% no-repeat, #fff url('../img/content/wall-bg-04.svg') 0% 100% no-repeat
@@ -276,7 +294,7 @@ p
 			top: 0
 			+try(100%)
 	&__arrow
-		display: inline-block
+		display: none
 		vertical-align: top
 		width: 57px
 		height: 57px
@@ -284,6 +302,16 @@ p
 		+tr(.4s)
 		&:hover
 			background-color: #f6f6f6
+		&.slick-arrow
+			display: inline-block
+	&__footer
+		.title__sh
+			margin-top: 15px
+		.title__sh,
+		.desc__sh
+			color: #000
+			opacity: .7
+
 	&_right
 		justify-content: flex-end
 		.wall__content
@@ -307,11 +335,25 @@ p
 	&_wide
 		.wall__picture
 			width: 100%
+			height: auto
 			right: 0
 			left: 0
-	&_half
-		min-height: 50vh
-		height: 400px
+		.btn-play
+			left: 50%
+			transform: translate(-50%, -50%);
+	&_autoheight
+		min-height: 0
+		height: auto
+		padding: 0
+		.wall__picture
+			position: static
+		.wall__img
+			position: static
+			width: 100%
+			height: auto
+			min-width: 0
+			min-height: 0
+			transform: none
 	.btn-border
 		width: 100%
 		height: 56px
@@ -691,100 +733,27 @@ p
 		+rb
 		+ana
 
+.full
+	position: relative
+	padding-top: 10vh
+	&__item
+		position: relative
+		width: 100%
+		height: 80vh
+		overflow: hidden
+	&__img
+		+vcenter
+		width: 100%
+		min-height: 100%
 
-// .aos-init
-// 	.wall
-// 		overflow: hidden
-// 		&_right
-// 			.wall__picture
-// 				transition: .4s .2s
-// 				transform: translateX(-90%) scale(.9)
-// 		&_left
-// 			.wall__picture
-// 				transition: .4s .2s
-// 				transform: translateX(90%) scale(.9)
-// 		&__text
-// 			transform: translateY(10px)
-// 			opacity: 0
-// 		&__content-1
-// 			background: url(../img/content/wall-bg-01.svg) -30% -30% no-repeat, #fff url(../img/content/wall-bg-02.svg) 130% 130% no-repeat
-// 			transition: .4s 1.8s
-// 		&__content-2
-// 			background: url(../img/content/wall-bg-03.svg) 130% 0% no-repeat, #fff url(../img/content/wall-bg-04.svg) 0% 130% no-repeat
-// 			transition: .4s 1.8s
+.infogrid
+	padding: 0
+	margin: 0
+	list-style: none
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
 
-// 	.slick-dots
-// 		opacity: 0
-// 		transition: .4s 2s
-
-// 	.startscreen
-// 		.startscreen__box
-// 			transition: .8s 1s
-// 			opacity: 0
-// 		.title__section
-// 			+try(-30px)
-// 			opacity: 0
-// 			transition: .8s .8s
-// 		.startscreen__text
-// 			+try(-30px)
-// 			opacity: 0
-// 			transition: .8s 1.2s
-// 		.btn
-// 			+try(-30px)
-// 			opacity: 0
-// 			transition: .8s 1.5s
-
-// 	.title__section
-// 		+try(-30px)
-// 		opacity: 0
-// 		transition: .8s .8s
-
-// .aos-animate
-// 	.wall
-// 		&_right
-// 			.wall__picture
-// 				transform: translateX(0)
-// 		&_left
-// 			.wall__picture
-// 				transform: translateX(0)
-// 		&__text
-// 			transition: .8s 1s
-// 			transform: translateY(0px)
-// 			opacity: 1
-// 		&__content-1
-// 			background: url(../img/content/wall-bg-01.svg) 0% 0% no-repeat, #fff url(../img/content/wall-bg-02.svg) 100% 100% no-repeat
-// 		&__content-2
-// 			background: url(../img/content/wall-bg-03.svg) 100% 0% no-repeat, #fff url(../img/content/wall-bg-04.svg) 0% 100% no-repeat
-// 	.slick-dots
-// 		transition: .4s 2s
-// 		opacity: 1
-
-// 	.startscreen__box
-// 		transition: .8s .8s
-// 		opacity: 1
-// 	.title__section
-// 		+try(0)
-// 		opacity: 1
-// 		transition: .8s .8s
-// 	.startscreen__text
-// 		+try(0)
-// 		opacity: 1
-// 		transition: .8s 1.2s
-
-// 	// #vazon
-// 	// 	.st2
-// 	// 	.st1,
-// 	// 	.st3,
-// 	// 	.st4,
-// 	// 	.st5
-// 	// 		opacity: 0
-// 	// 		// transform: translateX(0%) scale(1) rotate(0deg)
-// 	// 		// opacity: 1
-
-// 	// 	.obj-1,
-// 	// 	.obj-2
-// 	// 		transform: translateX(0) scale(1) rotate(0deg)
-// 	// 		opacity: 1
 
 .pagination
 	position: fixed
@@ -807,5 +776,28 @@ p
 	display: flex
 	align-items: center
 	justify-content: center
+.mod-flex-j
+	display: flex
+	align-items: center
+	justify-content: space-between
 	// height: 100%
 	// width: 100%
+.mod-h60
+	height: 60vh
+
+.mod-mt60
+	margin-top: 60px
+.mod-pt60
+	padding-top: 60px
+.mod-pt30
+	padding-top: 30px
+.mod-mb60
+	margin-bottom: 60px
+.mod-mb30
+	margin-bottom: 30px
+
+.mod-uppercase
+	text-transform: uppercase
+
+.center-text
+	text-align: center

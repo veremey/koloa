@@ -1,0 +1,17 @@
+
+<ul class="schedule__list {{#if mod}}{{mod}}{{/if}}">
+	{{#each item}}
+		<li class="schedule__item">
+			<div class="schedule__calendar">
+				<h3 class="title__w">{{week}}</h3>
+				<p class="desc__fb" data-stagger>{{time}}</p>
+			</div>
+			{{#if text}}
+				<div class="schedule__text " data-stagger>
+					{{{text}}}
+				</div>
+			{{/if}}
+
+		</li>
+	{{/each}}
+</ul>

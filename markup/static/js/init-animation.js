@@ -69,7 +69,7 @@ $(function () {
 			},
 			el3: {
 				selector: '[data-stagger]',
-				triggerHook: 0.8,
+				triggerHook: .95,
 				class: 'is-animated'
 			}
 		};

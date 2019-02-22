@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page page-visit">
+
+	<div class="page__wrapper ">
+		{{> header/header}}
+
+		<!-- 1 -->
+		<div class="section section_first section_autoheight is-animated"  >
+			<div class="section__bg " aria-hidden="true"></div>
+			<div class="layout layout_wide">
+				<div class="wall   wall_wide wall_autoheight">
+					<div class="wall__picture wall__picture_wide "  data-stagger >
+						<img src="static/img/content/rumsHero.png" alt="visit koloa rum " class="wall__img">
+					</div>
+				</div>
+				<div class="wall__info center-text mod-mt60">
+					<h2 class="title__section" role="heading" aria-level="2"  data-stagger>KOLOA RUM PREMIUM HAWAIIAN RUM </h2>
+					<div class="wall__info__text">
+						<p class="desc__fb"  data-stagger>We carefully and skillfully handcraft our premium Hawaiian rums from the finest sugarcane and the pure, abundant water sources of Kaua’i, Hawaii. Pristine rainwater from Mount Wai’ale’ale and nearby mountain peaks and rainforests is captured after filtering through volcanic strata and reaching vast underground aquifers. When combined with “tall cane” sugarcane, Kaua’i water imparts its own unique taste that perfectly complements Kōloa Rum. </p>
+						<p class="desc__fb"  data-stagger>Our truly unique and delicious premium rums include Kaua’i White, Gold, Dark, Spice and Coconut and Coffee Rum, as well as ready-to-drink Mai Tai, Rum Punch and Pineapple Passion products. We constantly experiment with seasonal releases in our distillery and collaborate with our neighbors to develop new and exciting offerings.</p>
+
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+		<!-- 2 -->
+		<div class="layout layout_small">
+			<ul class="infogrid">
+				{{> infobox/infobox infobox.box}}
+			</ul>
+		</div>
+
+		<!-- 3 -->
+		<div class="layout layout_small mod-pt60">
+			<h2 class="title__section mod-uppercase mod-mb60	" role="heading" aria-level="2"  data-stagger>Ready-to-Drink Products from Kōloa Rum</h2>
+			<ul class="infogrid">
+				{{> infobox/infobox infobox.tall}}
+			</ul>
+		</div>
+
+		<!-- map -->
+		<div class="section section_map is-animated"  >
+			<div class="section__bg " aria-hidden="true"></div>
+			<h2 class="title__section" aria-level="2" role="heading" data-stagger >Buy aloha in a store near you!</h2>
+			<div class="map" data-stagger >
+				<div id="map" >
+					<!-- <img src="static/img/content/map.png" alt=""> -->
+				</div>
+				<div class="map__wrap">
+					<form action="/" method="post" class="map__form">
+						<fieldset class="map__fieldset">
+							<input  type="text" id="zip" class="map__zip" placeholder="Enter ZIP code"  data-stagger >
+							<button class="btn map__btn anim-buble" data-stagger>check</button>
+						</fieldset>
+					</form>
+					<div class="map__location"  data-stagger >
+						<h2 class="title__g" role="heading" aria-level="2"  data-stagger  >Kōloa Rum Company Store <br> & Tasting Room</h2>
+						<div class="map__address"  data-stagger >
+							<p class="desc__rl">Kilohana Plantation, 3-2087</p>
+							<p class="desc__rl">Kaumualii Highway, Lihue, Kauai.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section_buy is-animated">
+				<h2 class="title__section" aria-level="2" role="heading" data-stagger  >buy aloha online</h2>
+				<button class="btn btn-border"  data-stagger >
+					<i class="icon-drizly"></i>
+					buy online
+				</button>
+			</div>
+		</div>
+
+	</div>
+	{{> footer/footer}}
+
+</body>
+
+</html>

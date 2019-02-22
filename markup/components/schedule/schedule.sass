@@ -1,0 +1,52 @@
+
+.schedule
+	background-color: #fff
+	padding: 40px 20px
+	box-shadow: 0 0 6px 0px rgba(0, 0, 0, .2)
+	width: 32%
+	&_wide
+		width: 64%
+	&.mod-tl
+		background: url('../img/content/wall-bg-01.svg') -30px -30px no-repeat #fff
+		background-size: 100px
+	&.mod-tr
+		background: url('../img/content/wall-bg-02.svg') 100% 0% no-repeat #fff
+		background-size: 100px
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		&.schedule_tasting
+			.schedule__calendar
+				padding: 0 30px
+				border-right: 1px solid #ebecee
+				flex: 0 0 250px
+			.schedule__item
+				height: auto
+				justify-content: space-between
+	&__item
+		display: flex
+		justify-content: center
+		height: 55px
+	&__calendar
+		display: flex
+		align-items: center
+		// flex: 0 0 250px
+		// justify-content: center
+	&__text
+		text-align: left
+		padding: 5px 30px 10px
+	.title__sh,
+	.desc__sh
+		display: inline
+	.title__g
+		color: #AE8E64
+		margin-bottom: 40px
+	.title__w
+		margin: 0 10px 0 0
+		display: inline-block
+		width: 40px
+		text-transform: uppercase
+		text-align: left
+	.desc__fb
+		margin: 0

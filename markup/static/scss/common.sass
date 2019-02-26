@@ -1,3 +1,51 @@
+.video
+	&__item
+		position: relative
+		height: 100vh
+		width: 100%
+		overflow: hidden
+		.carusel__box
+			visibility: hidden
+	&__img,
+	&__video
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		min-height: 100%
+		min-width: 100%
+		+r(800)
+			height: 100%
+
+
+
+
+.video-bg
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+.video
+	&__item
+		height: 100vh
+	&__img
+		display: none
+		+r(850)
+			display: block
+		&.is-mobile
+			display: none
+
+.video__video
+	display: block
+	+r(850)
+		display: none
+	&.is-mobile
+		display:  block
+
+
+
+
 
 *
 	box-sizing: border-box

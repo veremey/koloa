@@ -39,14 +39,32 @@
 				&:nth-of-type(2)
 					+tr(.4s 1s)
 
-//startscreen
-// .title__section
-// 	opacity: 0
-// 	+try(20px)
-// 	+tr(.4s)
-// 	&.is-animated
-// 		opacity: 1
-// 		+try(0px)
+.aloha
+	&__title
+		opacity: 0
+		+scale(2)
+		+tr(.4s .2s)
+		&.is-animated
+			opacity: 1
+			+scale(1)
+	&__btns
+		opacity: 0
+		+tr(.8s 1.2s)
+		&.is-animated
+			opacity: 1
+
+
+.hidden-title
+	display: inline-block
+	overflow: hidden
+	span
+		display: inline-block
+		+try(120%)
+		+tr(.8s .6s)
+	&.is-animated span
+		+try(0px)
+
+
 .startscreen__text
 	opacity: 0
 	+try(20px)

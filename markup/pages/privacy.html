@@ -15,7 +15,7 @@
 			<div class="layout layout_wide">
 
 				<div class="wall__info  mod-pt60 ">
-					<h2 class="title__section mod-uppercase mod-mb60" role="heading" aria-level="2"  data-stagger>Privacy Policy</h2>
+					<h2 class="title__section js-cut mod-uppercase mod-mb60" role="heading" aria-level="2"  data-stagger>Privacy Policy</h2>
 					<div class="wall__info__text">
 						<h3 class="title__pbb  mod-uppercase" role="heading" aria-level="2" data-stagger>Privacy Practices Policy</h3>
 						<p class="desc__fb"  data-stagger>Welcome to our Web Site <a href="www.koloarum.com" class="link-inherit">www.koloarum.com</a>. This Site is administered by Kōloa Rum Company (“KRC”) in Kalaheo, Hawaii, USA. We are committed to protecting the privacy of Internet users who visit our Site. This Privacy Practices Policy (“Privacy Policy”) is intended to inform you of the ways in which this Site collects information for the KRC brand featured on the Site www.koloarum.com, the uses for that information, and the ways in which we will protect any personal information you choose to provide us.</p>
@@ -34,37 +34,7 @@
 
 
 		<!-- map -->
-		<div class="section section_map is-animated"  >
-			<div class="section__bg " aria-hidden="true"></div>
-			<h2 class="title__section" aria-level="2" role="heading" data-stagger >Buy aloha in a store near you!</h2>
-			<div class="map" data-stagger >
-				<div id="map" >
-					<!-- <img src="static/img/content/map.png" alt=""> -->
-				</div>
-				<div class="map__wrap">
-					<form action="/" method="post" class="map__form">
-						<fieldset class="map__fieldset">
-							<input  type="text" id="zip" class="map__zip" placeholder="Enter ZIP code"  data-stagger >
-							<button class="btn map__btn anim-buble" data-stagger>check</button>
-						</fieldset>
-					</form>
-					<div class="map__location"  data-stagger >
-						<h2 class="title__g" role="heading" aria-level="2"  data-stagger  >Kōloa Rum Company Store <br> & Tasting Room</h2>
-						<div class="map__address"  data-stagger >
-							<p class="desc__rl">Kilohana Plantation, 3-2087</p>
-							<p class="desc__rl">Kaumualii Highway, Lihue, Kauai.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section_buy is-animated">
-				<h2 class="title__section" aria-level="2" role="heading" data-stagger  >buy aloha online</h2>
-				<button class="btn btn-border"  data-stagger >
-					<i class="icon-drizly"></i>
-					buy online
-				</button>
-			</div>
-		</div>
+		{{> map/map}}
 
 	</div>
 	{{> footer/footer}}

@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div class="wall__info center-text mod-mt60">
-					<h2 class="title__section" role="heading" aria-level="2"  data-stagger>VISIT US </h2>
+					<h2 class="title__section js-cut" role="heading" aria-level="2"  data-stagger>VISIT US </h2>
 					<div class="wall__info__text">
 						<p class="desc__fb"  data-stagger>Located at the at Kilohana Plantation in Lihue, Kaua’i, the Kōloa Rum Company Store creates the ambience of the bygone era of old plantation days, and offers our full range of our single-batch, premium Hawaiian rums, ready-to-drink cocktails, as well as tempting rum cakes, rum fudge sauce, Hawaiian Kukui Mai Tai Mix, tropical fruit jellies/jams, logo wear and a unique array of specialty gifts.</p>
 						<p class="desc__fb"  data-stagger>The Tasting Room, adjacent to the Company Store, offers daily scheduled tastings of our award-winning premium rums every half-hour, and has welcomed nearly 1 million people since it opened its doors in 2009. The Tasting Room accommodates up to 16 people per tasting. No reservations accepted.</p>
@@ -36,7 +36,7 @@
 			<div class="section__bg " aria-hidden="true"></div>
 			<div class="layout layout_wide">
 				<div class="wall__info center-text mod-mt60">
-					<h2 class="title__section" role="heading" aria-level="2">WORKING HOURS </h2>
+					<h2 class="title__section js-cut" role="heading" aria-level="2">WORKING HOURS </h2>
 					<div class="wall mod-flex-j mod-lg-column">
 						<div class="schedule mod-tl text-center">
 							<h3 class="title__g">Store Hours</h3>
@@ -62,7 +62,7 @@
 				<div class="wall wall_left wall-02">
 					<div class="wall__content wall__content-2"  data-stagger >
 						<div class="wall__content_item"  data-stagger >
-							<h2 class="title__section" role="heading" aria-level="2"  >company store
+							<h2 class="title__section js-cut" role="heading" aria-level="2"  >company store
 							</h2>
 							<div class="wall__dots" >
 								<!-- dots -->
@@ -73,7 +73,7 @@
 							<a href="#" class="btn btn-border"  data-stagger >learn more</a>
 						</div>
 						<div class="wall__content_item"  data-stagger >
-							<h2 class="title__section" role="heading" aria-level="2"  >company store
+							<h2 class="title__section js-cut" role="heading" aria-level="2"  >company store
 							</h2>
 							<div class="wall__dots" >
 								<!-- dots -->
@@ -106,37 +106,7 @@
 			</div>
 		</div>
 		<!-- map -->
-		<div class="section section_map is-animated"  >
-			<div class="section__bg " aria-hidden="true"></div>
-			<h2 class="title__section" aria-level="2" role="heading" data-stagger >Buy aloha in a store near you!</h2>
-			<div class="map" data-stagger >
-				<div id="map" >
-					<!-- <img src="static/img/content/map.png" alt=""> -->
-				</div>
-				<div class="map__wrap">
-					<form action="/" method="post" class="map__form">
-						<fieldset class="map__fieldset">
-							<input  type="text" id="zip" class="map__zip" placeholder="Enter ZIP code"  data-stagger >
-							<button class="btn map__btn anim-buble" data-stagger>check</button>
-						</fieldset>
-					</form>
-					<div class="map__location"  data-stagger >
-						<h2 class="title__g" role="heading" aria-level="2"  data-stagger  >Kōloa Rum Company Store <br> & Tasting Room</h2>
-						<div class="map__address"  data-stagger >
-							<p class="desc__rl">Kilohana Plantation, 3-2087</p>
-							<p class="desc__rl">Kaumualii Highway, Lihue, Kauai.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section_buy is-animated">
-				<h2 class="title__section" aria-level="2" role="heading" data-stagger  >buy aloha online</h2>
-				<button class="btn btn-border"  data-stagger >
-					<i class="icon-drizly"></i>
-					buy online
-				</button>
-			</div>
-		</div>
+		{{> map/map}}
 
 	</div>
 	{{> footer/footer}}

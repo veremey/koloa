@@ -1,6 +1,17 @@
 
 
 
+$('.js-cut').each(function(){
+	var text = $(this).html().split(' '),
+		len = text.length,
+		result = [];
+
+	for( var i = 0; i < len; i++ ) {
+		result[i] = '<span class="hidden-title" data-stagger><span>' + text[i] + '</span></span>';
+	}
+	$(this).html(result.join(' '));
+});
+
 
 function initGlobalAnimations(container, selfTriggeredElems) {
 	var controller = new ScrollMagic.Controller();
@@ -79,7 +90,7 @@ $(function () {
 		var selfTriggeredElems = {
 			el1: {
 				selector: '[data-stagger]',
-				triggerHook: 0.8,
+				triggerHook: 0.9,
 				class: 'is-animated'
 			}
 		};
@@ -95,6 +106,7 @@ $(function () {
 		};
 
 		initGlobalAnimations( 'section_buy ', selfTriggeredElems );
+
 
 
 	});

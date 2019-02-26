@@ -1,0 +1,30 @@
+
+<ul class="coctail">
+	{{#each this}}
+		<li class="coctail__item">
+			<a href="/ingredients.html" class="coctail__pic">
+				<img src="{{img}}" alt="{{title}}" class="coctail__img">
+			</a>
+			<div class="coctail__content">
+				<h3 class="title__pbi">{{{title}}}</h3>
+				<div class="coctail__contain">
+					<table class="coctail__table">
+					{{#each row}}
+						<tr>
+							<td>
+								<p class="coctail__ml">{{{ml}}}</p>
+							</td>
+							<td>
+								<p class="coctail__desc">{{{desc}}}</p>
+							</td>
+						</tr>
+					{{/each}}
+				</table>
+				</div>
+			</div>
+			<div class="coctail__footer">
+				<a href="/ingredients.html" class="show-more"><i class="arrow-right"></i></a>
+			</div>
+		</li>
+	{{/each}}
+</ul>

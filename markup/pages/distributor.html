@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page page-visit">
+
+	<div class="page__wrapper ">
+		{{> header/header}}
+		<!-- 0 -->
+		<div class="section section_first section_autoheight  is-animated" >
+			<div class="section__bg " aria-hidden="true"></div>
+			<div class="wall   wall_wide wall_autoheight" data-singleSlide="wall__picture">
+				<div class="wall__picture wall__picture_wide "  data-stagger >
+					<img src="static/img/content/hero-distirbutor.png" alt="visit koloa rum " class="wall__img">
+				</div>
+			</div>
+			<div class="wall__arrows">
+				<button class="wall__arrow wall__arrow_left"  data-stagger >
+					<i class="arrow-left"></i>
+				</button>
+				<button class="wall__arrow wall__arrow_right"  data-stagger >
+					<i class="arrow-right"></i>
+				</button>
+			</div>
+		</div>
+		<!-- 1 -->
+		<div class="section section_autoheight  is-animated"  >
+			<div class="section__bg " aria-hidden="true"></div>
+			<div class="layout layout_wide">
+
+				<div class="wall__info center-text  ">
+					<h2 class="title__section mod-uppercase" role="heading" aria-level="2"  data-stagger>Become a distributor</h2>
+					<div class="wall__info__text">
+						<p class="desc__fb"  data-stagger>The award-winning and authentic Hawaiian ingredients and flavors found in Kōloa Rum allow customers to experience the Spirit of Aloha in every sip, wherever they may be. The super-premium quality of Kōloa Rum reflects the company’s commitment to bringing people together <br> in the name of Ohana (family).</p>
+						<p class="desc__fb"  data-stagger>Kōloa Rum is focused on the craft of developing delicious rum that is attractive to spirits enthusiasts of all kinds – from slow sippers who judge a rum on its merits alone – to the home mixologist who is just looking to add a splash of Hawaii to their cocktails – to bar owners and restaurateurs looking for that unique taste and story to spice up its beverage program.</p>
+						<p class="desc__fb"  data-stagger>Our distributors are the key to sharing the smooth, rich and authentically Hawaiian taste of Kōloa Rum, and to bring the Aloha way of life to on-premise locations and retailers all throughout the mainland United States and to the rest of the world.</p>
+						<p class="desc__fb"  data-stagger><b>If you are interested in joining the Kōloa Rum Ohana as a distributor or to learn more, please email</b></p>
+						<div class="text-center">
+							<a href="mailto:loremipsum@koloarum.com" class="link-btn">loremipsum@koloarum.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- map -->
+		<div class="section section_map is-animated"  >
+			<div class="section__bg " aria-hidden="true"></div>
+			<h2 class="title__section" aria-level="2" role="heading" data-stagger >Buy aloha in a store near you!</h2>
+			<div class="map" data-stagger >
+				<div id="map" >
+					<!-- <img src="static/img/content/map.png" alt=""> -->
+				</div>
+				<div class="map__wrap">
+					<form action="/" method="post" class="map__form">
+						<fieldset class="map__fieldset">
+							<input  type="text" id="zip" class="map__zip" placeholder="Enter ZIP code"  data-stagger >
+							<button class="btn map__btn anim-buble" data-stagger>check</button>
+						</fieldset>
+					</form>
+					<div class="map__location"  data-stagger >
+						<h2 class="title__g" role="heading" aria-level="2"  data-stagger  >Kōloa Rum Company Store <br> & Tasting Room</h2>
+						<div class="map__address"  data-stagger >
+							<p class="desc__rl">Kilohana Plantation, 3-2087</p>
+							<p class="desc__rl">Kaumualii Highway, Lihue, Kauai.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section_buy is-animated">
+				<h2 class="title__section" aria-level="2" role="heading" data-stagger  >buy aloha online</h2>
+				<button class="btn btn-border"  data-stagger >
+					<i class="icon-drizly"></i>
+					buy online
+				</button>
+			</div>
+		</div>
+
+	</div>
+	{{> footer/footer}}
+
+</body>
+
+</html>

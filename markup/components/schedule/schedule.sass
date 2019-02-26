@@ -4,8 +4,16 @@
 	padding: 40px 20px
 	box-shadow: 0 0 6px 0px rgba(0, 0, 0, .2)
 	width: 32%
+	+r(1000)
+		margin-bottom: 30px
+	+r(1000)
+		width: 96%
+		max-width: 660px
 	&_wide
 		width: 64%
+		+r(1000)
+			width: 96%
+			max-width: 660px
 	&.mod-tl
 		background: url('../img/content/wall-bg-01.svg') -30px -30px no-repeat #fff
 		background-size: 100px
@@ -21,6 +29,10 @@
 				padding: 0 30px
 				border-right: 1px solid #ebecee
 				flex: 0 0 250px
+				+r(650)
+					border: none
+				+r(400)
+					padding: 0
 			.schedule__item
 				height: auto
 				justify-content: space-between
@@ -28,6 +40,10 @@
 		display: flex
 		justify-content: center
 		height: 55px
+		+r(650)
+			flex-wrap: wrap
+			margin-bottom: 14px
+			height: 30px
 	&__calendar
 		display: flex
 		align-items: center
@@ -36,6 +52,8 @@
 	&__text
 		text-align: left
 		padding: 5px 30px 10px
+		+r(400)
+			padding: 0
 	.title__sh,
 	.desc__sh
 		display: inline

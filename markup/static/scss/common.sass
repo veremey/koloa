@@ -57,6 +57,14 @@ b, strong
 p
 	margin: 0
 
+.page__list
+	text-align: center
+	list-style: none
+	margin-bottom: 10px
+	padding-top: 60px
+	a
+		color: #000
+
 .layout
 	width: 100%
 	max-width: 1800px
@@ -147,12 +155,17 @@ p
 		padding-bottom: 80px
 		background-color: #fcfdfd
 		+r(1000)
-			padding-top: 20px
+			padding-top: 40px
 		.title__section
 			text-transform: uppercase
-			margin-bottom: 2em
+			// margin-bottom: 2em
+			max-width: 94%
+			margin: 0 auto 2em
+			text-align: center
 			+r(800)
+				max-width: 100%
 				padding: 0 20px
+
 	&_buy
 		.title__section
 			text-transform: uppercase
@@ -174,8 +187,12 @@ p
 	&_first
 		padding-top: 80px
 		margin: 0
+		.wall__arrows
+			+r(1000)
+				margin-top: 70px
 	&_autoheight
 		height: auto
+		min-height: 0
 		.layout
 			height: auto
 			&_wide
@@ -198,7 +215,21 @@ p
 	display: flex
 	align-items: center
 	+r(1000)
-		flex-direction: column
+		// flex-direction: column//slider
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px
+		+r(650)
+			flex-wrap: wrap
+		.breadcrumbs
+			margin: 0 20px 0 0
+			+r(650)
+				width: 100%
+				margin-bottom: 20px
+		.share
+			margin-bottom: 10px
 	&__play
 		display: inline-block
 		vertical-align: top
@@ -247,9 +278,15 @@ p
 		transform: translate(-50%, -50%)
 	&__info
 		width: 100%
-		max-width: 1100px
+		max-width: 1140px
 		padding: 0 20px
 		margin: 0 auto 60px
+		+r(650)
+			+r(650)
+				margin-bottom: 20px
+		&.mod-mt60
+			+r(650)
+				margin-top: 20px
 	&__content
 		position: relative
 		display: inline-block
@@ -293,6 +330,8 @@ p
 		+r(1000)
 			top: 0
 			+try(100%)
+		&.is-hidden
+			display: none
 	&__arrow
 		display: none
 		vertical-align: top
@@ -311,9 +350,14 @@ p
 		.desc__sh
 			color: #000
 			opacity: .7
-
+	&__preview
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
 	&_right
 		justify-content: flex-end
+		+r(1000)
+			flex-direction: column
 		.wall__content
 			margin-right: 50%
 			+trx(90%)
@@ -324,6 +368,8 @@ p
 			left: 0
 	&_left
 		justify-content: flex-start
+		+r(1000)
+			flex-direction: column
 		.wall__content
 			margin-left: 50%
 			+trx(-90%)
@@ -335,18 +381,19 @@ p
 	&_wide
 		.wall__picture
 			width: 100%
-			height: auto
+			// height: auto
+			height: 100% // about
 			right: 0
 			left: 0
 		.btn-play
 			left: 50%
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%)
 	&_autoheight
 		min-height: 0
 		height: auto
 		padding: 0
 		.wall__picture
-			position: static
+			position: relative
 		.wall__img
 			position: static
 			width: 100%
@@ -362,6 +409,38 @@ p
 	.slick-list,
 	.slick-track
 		height: 100%
+
+.ingredients
+	&__content
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 30px
+		+r(650)
+			margin-bottom: 0
+	&__col
+		width: 46%
+		+r(650)
+			width: 100%
+			margin-bottom: 20px
+	&__pic
+	&__img
+		max-width: 100%
+	&__title
+		display: inline-block
+		vertical-align: top
+		padding: 10px 16px
+		background-color: #a58359
+		color: #fff
+		font-size: 16px
+		+pb
+	.coctail__ml
+		font-size: 24px
+		white-space: nowrap
+	.coctail__desc
+		font-size: 20px
+		line-height: 2
+		+rl
 
 .coins
 	width: 100%
@@ -395,6 +474,40 @@ p
 		+tr(.4s)
 		&:hover
 			color: $gold
+
+.date
+	margin-bottom: 40px
+	font-size: 16px
+	color: #000
+	+rb
+	+r(650)
+		margin-bottom: 20px
+
+.preview
+	display: block
+	margin-bottom: 10px
+	&__pic
+		display: block
+		height: 0
+		overflow: hidden
+		position: relative
+		padding-bottom: 60%
+		margin-bottom: 20px
+		+r(850)
+			padding-bottom: 40%
+		+r(650)
+			padding-bottom: 60%
+	&__img
+		+vcenter
+	.date
+		margin-bottom: 20px
+		color: #4B4B4B
+		opacity: .7
+
+
+.article
+	padding-bottom: 40px
+	border-bottom: 3px solid #ceb799
 
 .products
 	padding: 0
@@ -555,6 +668,7 @@ p
 		width: 100%
 		background-color: #fff
 		padding: 35px 35px 20px
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1)
 	.title__g
 		margin-bottom: 1.2em
 	.desc__rl
@@ -745,6 +859,20 @@ p
 		+vcenter
 		width: 100%
 		min-height: 100%
+	&__grid
+		padding: 10px
+	+ .wall__arrows
+		top: 50%
+		+try(-50%)
+		margin-top: 5vh
+	&_grid
+		.full__item
+			width: 100%
+			height: 40vh
+		// + .wall__arrows
+		// 	margin-top: 20px
+
+		// 	height: 200px
 
 .infogrid
 	padding: 0
@@ -754,6 +882,80 @@ p
 	justify-content: space-between
 	flex-wrap: wrap
 
+.columns
+	display: flex
+	justify-content: space-between
+	+r(850)
+		flex-wrap: wrap
+	&__item
+		width: 42%
+		display: inline-block
+		vertical-align: top
+		+r(850)
+			width: 100%
+		.title__g
+			color: #ae8e64
+	&-44
+		.columns__item
+			width: 44%
+			+r(850)
+				width: 100%
+	&-wrap
+		flex-wrap: wrap
+
+.contact
+	display: block
+	width: 100%
+	text-align: left
+	&__fieldset
+		border: none
+		margin: 0 0 16px
+		padding: 0
+		box-shadow: 0 0 34px rgba(0, 0, 0, .05)
+	&__input,
+	&__textarea
+		width: 100%
+		border: none
+		padding: 19px 24px
+		color: #000
+		resize: none
+		+placeholder
+			color: #878787
+	&__textarea
+		height: 152px
+	.btn
+		margin: 0
+		width: 198px
+		max-width: 100%
+		height: 56px
+		+rb
+		+ana
+
+.list-dots
+	padding: 0
+	margin: 0 0 40px
+	list-style: none
+	&__item
+		position: relative
+		padding-left: 30px
+		line-height: 1.8
+		text-align: left
+		font-size: 16px
+		color: rgba(0, 0, 0, .7)
+		+r(850)
+			margin-bottom: 16px
+			line-height: 1.4
+		&:after
+			content: ''
+			position: absolute
+			top: .6em
+			left: 0
+			width: 6px
+			height: 6px
+			+rotate(45)
+			background-color: #AE8E64
+	b
+		font-weight: bold
 
 .pagination
 	position: fixed
@@ -771,6 +973,95 @@ p
 		&.is-active
 			background: red
 
+.breadcrumbs
+	padding: 0
+	margin: 0 0 20px
+	list-style: none
+	li
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding-right: 16px
+		margin-bottom: 10px
+		font-size: 12px
+		+rb
+		font-style: italic
+		color: rgba(0, 0, 0, .7)
+		&:not(:last-of-type):after
+			content: '>'
+			position: absolute
+			right: 4px
+			top: -0.2em
+			color: inherit
+			font-size: 14px
+
+	a
+		color: inherit
+		+tr(.4s)
+		&:hover
+			text-decoration: underline
+
+.select
+	position: relative
+	display: block
+	height: 56px
+	width: 100%
+	font-size: 16px
+	color: #878787
+	cursor: pointer
+	&-hidden
+		display: none
+		visibility: hidden
+		padding-right: 10px
+
+	&-styled
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #fff
+		padding: 19px 24px
+		transition: all 0.2s ease-in
+		&:after
+			content: ""
+			width: 56px
+			height: 56px
+			position: absolute
+			top: 0px
+			right: 0px
+			background: #fafbfd url('../img/content/arrow-left.svg') 50% 50% no-repeat
+			background-size: 32px 18px
+			+rotate(-90)
+		&:hover
+			background-color: darken(#fff, 0)
+		&:active, &.active
+			background-color: darken(#fff, 0)
+	&-options
+		display: none
+		position: absolute
+		top: 100%
+		right: 0
+		left: 0
+		z-index: 999
+		margin: 0
+		padding: 0 50px 20px 24px
+		list-style: none
+		background-color: darken(#fff, 0)
+		box-shadow: 0 0 34px rgba(36px, 0, 0, .05)
+		li
+			margin: 0
+			padding: 12px 0
+			text-align: left
+			border-top: 1px solid darken(#fff, 10)
+			transition: all 0.15s ease-in
+			color: #9a9a9a
+			&:hover
+				color: #878787
+				+rb
+			&[rel="hide"]
+				display: none
+
 
 .mod-flex
 	display: flex
@@ -782,22 +1073,39 @@ p
 	justify-content: space-between
 	// height: 100%
 	// width: 100%
+.mod-lg-column
+	+r(1000)
+		flex-direction: column
 .mod-h60
 	height: 60vh
 
 .mod-mt60
 	margin-top: 60px
+.mod-mb0
+	margin-bottom: 0px
 .mod-pt60
 	padding-top: 60px
 .mod-pt30
 	padding-top: 30px
+.mod-pt0
+	padding-top: 0px
+.mod-pb60
+	padding-bottom: 60px
+.mod-pb30
+	padding-bottom: 30px
 .mod-mb60
 	margin-bottom: 60px
 .mod-mb30
 	margin-bottom: 30px
+.mod-mb40
+	margin-bottom: 40px
+.mod-mb0
+	margin-bottom: 0px
 
 .mod-uppercase
 	text-transform: uppercase
 
 .center-text
 	text-align: center
+.text-underline
+	text-decoration: underline

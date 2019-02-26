@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page page-visit">
+
+	<div class="page__wrapper ">
+		{{> header/header}}
+		<!-- 0 -->
+		<div class="section section_first section_autoheight is-animated"  >
+			<div class="layout layout_wide">
+				<div class="wall__info  mod-mt60 mod-mb0">
+
+					<div class="wall__header">
+						<ul class="breadcrumbs">
+							<li><a href="/">Home</a></li>
+							<li><a href="#">Talk Story</a></li>
+							<li>Welcome to the Talk Story blog by Koloa Rum!</li>
+						</ul>
+						{{> share/share}}
+					</div>
+
+					<div class="ingredients">
+						<h2 class="title__subsection" role="heading" aria-level="2"  data-stagger>Kaua’i Blossom Cocktail</h2>
+						<p class="desc__fb"  data-stagger> <b>Created by Ryan Sanford & Joel Downs of Oasis on the Beach — Kaua’i, Hawaii</b></p>
+						<div class="ingredients__content">
+							<div class="ingredients__col">
+								<div class="ingredients__pic">
+									<img src="static/img/content/coc-01.png" alt="coctail"  class="ingredients__img">
+								</div>
+							</div>
+							<div class="ingredients__col">
+								<h3 class="ingredients__title" role="heading" aria-level="3">Ingredients</h3>
+								<table class="coctail__table mod-mb30">
+									<tr >
+										<td >
+											<p class="coctail__ml">1 &#188; oz.</p>
+										</td>
+										<td>
+											<p class="coctail__desc">Koloa White Rum</p>
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<p class="coctail__ml">2 oz.</p>
+										</td>
+										<td>
+											<p class="coctail__desc">Fresh Passion Fruit Juice</p>
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<p class="coctail__ml">1 &#188; oz.</p>
+										</td>
+										<td>
+											<p class="coctail__desc">Lavender Simple Syrup</p>
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<p class="coctail__ml">4 - 6 oz.</p>
+										</td>
+										<td>
+											<p class="coctail__desc">Club Soda</p>
+										</td>
+									</tr>
+								</table>
+								<p class="desc__fb"  data-stagger>Combine ingredients in a cocktail shaker. Pour into Collins glass.<br>Top with 4–6 oz. Club Soda. Garnish with an orchid.</p>
+							</div>
+						</div>
+						<h2 class="title__pbb mod-uppercase  mod-mb30" aria-level="2" role="heading">More Info</h2>
+						<p class="desc__fb"  data-stagger>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<h2 class="title__pbb mod-uppercase  mod-mb30" aria-level="2" role="heading">SIMILAR COCKTAILS</h2>
+
+						{{> coctail/coctail coctail.simple}}
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- map -->
+		<div class="section section_map is-animated"  >
+			<div class="section__bg " aria-hidden="true"></div>
+			<h2 class="title__section" aria-level="2" role="heading" data-stagger >Buy aloha in a store near you!</h2>
+			<div class="map" data-stagger >
+				<div id="map" >
+					<!-- <img src="static/img/content/map.png" alt=""> -->
+				</div>
+				<div class="map__wrap">
+					<form action="/" method="post" class="map__form">
+						<fieldset class="map__fieldset">
+							<input  type="text" id="zip" class="map__zip" placeholder="Enter ZIP code"  data-stagger >
+							<button class="btn map__btn anim-buble" data-stagger>check</button>
+						</fieldset>
+					</form>
+					<div class="map__location"  data-stagger >
+						<h2 class="title__g" role="heading" aria-level="2"  data-stagger  >Kōloa Rum Company Store <br> & Tasting Room</h2>
+						<div class="map__address"  data-stagger >
+							<p class="desc__rl">Kilohana Plantation, 3-2087</p>
+							<p class="desc__rl">Kaumualii Highway, Lihue, Kauai.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section_buy is-animated">
+				<h2 class="title__section" aria-level="2" role="heading" data-stagger  >buy aloha online</h2>
+				<button class="btn btn-border"  data-stagger >
+					<i class="icon-drizly"></i>
+					buy online
+				</button>
+			</div>
+		</div>
+
+	</div>
+	{{> footer/footer}}
+
+</body>
+
+</html>

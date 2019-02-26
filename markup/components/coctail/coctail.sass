@@ -1,0 +1,74 @@
+
+.coctail
+	display: flex
+	// justify-content: space-between
+	flex-wrap: wrap
+	padding: 0
+	margin: 0 0 0 -20px
+	list-style: none
+	text-align: left
+	font-size: 0
+	&__item
+		display: flex
+		flex-direction: column
+		width: calc(33.3333% - 20px)
+		box-shadow: 0 0 34px rgba(0, 0, 0, .05)
+		margin-bottom: 30px
+		margin-left: 20px
+		background-color: #fff
+		+r(1000)
+			width: calc(50% - 20px)
+		+r(650)
+			width: calc(100% - 20px)
+	&__pic
+		position: relative
+		height: 280px
+		background-color: #fcfbfc
+	&__img
+		+vcenter
+		max-height: 80%
+		max-width: 50%
+	&__content
+		background-color: #fff
+		padding: 20px 20px 5px
+	&__table
+		td
+			padding: 0
+			vertical-align: baseline
+		p
+			line-height: 30px
+	&__row
+		display: flex
+	&__ml
+		text-align: right
+		margin-right: 20px
+		color: #AE8E64
+		font-size: 24px
+		line-height: 32px
+		white-space: nowrap
+		text-align: right
+		+pb
+	&__desc
+		align-self: flex-end
+		color: #000
+		font-size: 12px
+		line-height: 1.6
+		+rb
+		span
+			+rl
+	&__footer
+		display: flex
+		justify-content: flex-end
+		margin-top: auto
+		background-color: #fff
+	.show-more
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 54px
+		width: 54px
+		background-color: #fafbfd
+		+tr(.4s)
+		&:hover
+			background-color: #ccc
+

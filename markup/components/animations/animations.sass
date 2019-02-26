@@ -72,6 +72,17 @@
 		transform: translate(-36%, -50%)
 		+r(1000)
 			transform: translate(50%, -50%)
+.wall_wide .btn-play
+	opacity: 0
+	transform: translate(-50%, -60%)
+	+tr(.4s .4s)
+	+r(1000)
+		transform: translate(-50%, -60%)
+	&.is-animated
+		opacity: 1
+		transform: translate(-50%, -50%)
+		+r(1000)
+			transform: translate(-50%, -50%)
 .startscreen__gallery
 	opacity: 0
 	+try(20px)

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page page-visit">
+
+	<div class="page__wrapper ">
+		{{> header/header}}
+		<!-- 0 -->
+		<div class="section section_first section_autoheight mod-pb60 is-animated" >
+			<div class="section__bg " aria-hidden="true"></div>
+
+			<div class="layout layout_wide">
+
+				<div class="wall__info  mod-mt60 mod-mb30">
+					<h2 class="title__section mod-uppercase mod-mb60" role="heading" aria-level="2"  data-stagger>Contact</h2>
+					<div class="columns columns-44">
+						<div class="columns__item mod-mb30">
+							<h2 class="title__pbb mod-uppercase  mod-mb40" role="heading" aria-level="2">send us a message</h2>
+							<form action="/" method="post" class="contact">
+								<fieldset class="contact__fieldset">
+									<input type="text" class="contact__input" placeholder="Your Name (required)">
+								</fieldset>
+								<fieldset class="contact__fieldset">
+									<input type="email" class="contact__input" placeholder="Your Email (required)">
+								</fieldset>
+								<fieldset class="contact__fieldset">
+									<select id="subject" class="contact__select">
+										<option value="hide">Subject</option>
+										<option value="0" >Distribution inquiry</option>
+										<option value="1">Sales inquiry </option>
+										<option value="2">Media inquiry</option>
+										<option value="3">Customer Service inquiry</option>
+										<option value="4">Company Store inquiry</option>
+										<option value="5">Tasting Room inquiry</option>
+									</select>
+								</fieldset>
+								<fieldset class="contact__fieldset">
+									<textarea class="contact__textarea" name="message" id=""  placeholder="Your Message"></textarea>
+								</fieldset>
+								<button class="btn btn-border" data-stagger >Send</button>
+							</form>
+						</div>
+						<div class="columns__item ">
+							<h2 class="title__pbb mod-uppercase  mod-mb30" role="heading" aria-level="2">Kōloa Rum Company Store & Tasting Room</h2>
+							<p class="desc__fb" data-stagger>Kilohana Plantation, 3-2087 Kaumualii Highway<br>Lihue, HI 96766<br>808-246-8900</p>
+							<p class="desc__fb" data-stagger>Distribution and sales: 808-332-9333<br>Customer service: XXX-XXX-XXXX</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{{> footer/footer}}
+
+</body>
+
+</html>

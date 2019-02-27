@@ -23,6 +23,7 @@ $(function () {
 	closePpp = $('.js-close');
 	closePpp.on('click', closePPP );
 
+	// close ppp on 'esc'
 	$( document ).on( 'keydown', function ( e ) {
 		if ( e.keyCode === 27 ) {
 			if($('.ppp').hasClass('is-active')){
@@ -35,7 +36,17 @@ $(function () {
 
 	// burger
 	$(".trigger").click(function() {
-		$(this).toggleClass("is-active");
+		// $(this).toggleClass("is-active");
+		if($(this).hasClass('is-active')){
+			$(this).removeClass('is-active');
+			$('.page__wrapper').removeClass('init-scroll');
+		} else {
+			$(this).addClass('is-active');
+			$('.page__wrapper').addClass('init-scroll');
+			// setTimeout(function(){
+				$('.page__wrapper').addClass('init-scroll');
+			// }, 800);
+		}
 	});
 
 	if($(document).width() < 1000){
@@ -62,7 +73,7 @@ $(function () {
 		initMap();
 	}
 
-	// saelect
+	// select
 
 	$('select').each(function(){
 		var $this = $(this), numberOfOptions = $(this).children('option').length;
@@ -111,6 +122,8 @@ $(function () {
 
 }); // ready
 
+var player;
+
 $(window).on('resize', function() {
 	 dotsPosition('.wall-01');
 	 dotsPosition('.wall-02');
@@ -127,23 +140,6 @@ function stickyHeader() {
 	} else {
 		$('.header').removeClass('is-sticky');
 	}
-}
-
-function openPPP () {
-	var pppName = $(this).data('ppp');
-
-	$('.ppp, .ppp__body').removeClass('is-active');
-	$('#' + pppName).addClass('is-active');
-	$('.ppp').addClass('is-active');
-}
-
-function closePPP () {
-	var video = $('.ppp__body').find('.video__media');
-
-	if($('#player').length){
-		player.stopVideo();
-	}
-	$('.ppp, .ppp__body').removeClass('is-active');
 }
 
 function scrollToNextSection (){
@@ -188,7 +184,8 @@ function showInfo(){
 
 	// 4. The API will call this function when the video player is ready.
 	function onPlayerReady(event) {
-		player.playVideo();
+		// player.playVideo();
+		event.target.playVideo();
 	}
 
 	// 5. The API calls this function when the player's state changes.
@@ -196,16 +193,34 @@ function showInfo(){
 	//    the player should play for six seconds and then stop.
 	var done = false;
 	function onPlayerStateChange(event) {
-		if (event.data == YT.PlayerState.PLAYING && !done) {
-			setTimeout(stopVideo, 6000);
-			done = true;
-		}
+		// if (event.data == YT.PlayerState.PLAYING && !done) {
+		// 	setTimeout(stopVideo, 6000);
+		// 	done = true;
+		// }
 	}
-	function stopVideo() {
-		player.stopVideo();
+	function stopVideo(event) {
+		// player.stopVideo();
+		event.target.stopVideo();
 	}
 /*-----------------------------------------------------------*/
 
+
+function openPPP () {
+	var pppName = $(this).data('ppp');
+
+	$('.ppp, .ppp__body').removeClass('is-active');
+	$('#' + pppName).addClass('is-active');
+	$('.ppp').addClass('is-active');
+}
+
+function closePPP () {
+	var video = $('.ppp__body').find('#player');
+
+	if(video.length){
+		player.stopVideo();
+	}
+	$('.ppp, .ppp__body').removeClass('is-active');
+}
 
 
 function slickStartscreen(){
@@ -243,7 +258,6 @@ function slickGrid(){
 	var slickSlide = $('[data-singlegrid]');
 	var getslickSlideItem = $('[data-singlegrid]').attr('data-singlegrid');
 	var slickSlideItem = $('.' + getslickSlideItem);
-
 
 	slickSlide.each(function(){
 		var slickSlideItemLength = $(this).find('.' + getslickSlideItem).length;
@@ -341,6 +355,7 @@ function setupVideo(video){
 		btn.remove();
 		video.appendChild(iframe);
 
+
 		function onYouTubeIframeAPIReady() {
 			player = new YT.Player('player', {
 				height: height,
@@ -358,6 +373,7 @@ function setupVideo(video){
 
 	link.removeAttribute('href');
 	video.classList.add('video--enabled');
+
 }
 
 function parseMediaUrl(media){

@@ -276,7 +276,7 @@
 			</div>
 		</div>
 		<!-- 5 -->
-		<div class="section is-animated"  >
+		<div class="section mod-flex-only is-animated"  >
 			<div class="layout_wide">
 				{{>vazon-2/vazon-2}}
 				<div class="wall  wall_right wall_wide">
@@ -321,7 +321,7 @@
 			<a href="#" class="desc__r"  data-stagger >Click to view Kōloa's extensive award list!</a>
 		</div>
 		<!-- 6 -->
-		<div class="section is-animated"  >
+		<div class="section  mod-flex-only  is-animated"  >
 			<div class="layout_wide">
 				<div class="wall wall_left wall_wide">
 					<div class="wall__content" data-stagger>
@@ -342,7 +342,144 @@
 		{{> map/map}}
 
 	</div>
-	{{> footer/footer}}
+
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__column  footer__column_logo">
+				<a href="index.html" class="footer__link">
+					<img src="static/img/content/logo.svg" alt="koloa rum logo">
+				</a>
+			</div>
+			<div class="footer__column footer__column_center ">
+				<div class="footer__nav">
+					<div class="footer__nav_column">
+						<h3 class="title__f" aria-level="3"  role="heading">Links</h3>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Visit</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Rums</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">About</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Contact</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Distributors</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Buy</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Privacy Policy</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Cookies</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Terms of Use</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav_column">
+						<h3 class="title__f" aria-level="3"  role="heading">Find Us</h3>
+						<p class="desc__f">3-2087 Kaumualii Highway<br>Lihue, HI 96766</p>
+						<p class="desc__f">Phone:
+							<a href="tel:8082468900"  class="footer__link">808-246-8900</a>
+							<br>
+							Email:
+							<a href="mailto: info@koloarum.com" class="footer__link">info@koloarum.com</a>
+						</p>
+						<p class="desc__or">At Kōloa Rum we consider the lives of all of our Ohana, or family, to be precious. Please drink responsibly.</p>
+						<div class="footer__column">
+							<img src="static/img/content/f-logo-01.png" alt="responsible drinking logo" class="footer__img">
+							<img src="static/img/content/f-logo-02.png" alt="drink in moderation logo" class="footer__img">
+						</div>
+
+					</div>
+				</div>
+				<div class="connect">
+					<h3 class="title__f" role="heading" aria-level="3">Stay connected!</h3>
+					<form class="connect__form" action="/" method="post">
+						<fieldset class="connect__fieldset">
+							<input  type="text" id="email" class="connect__mail">
+							<button class="btn connect__btn anim-buble">subscribe</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="footer__column footer__column_right">
+				<div class="insta">
+					<div class="insta__header">
+						<div class="insta__user">
+							<div class="insta__user_pic">
+								<img src="static/img/content/inst-koloa.jpg"  class="insta__user_img" alt="instagramm user logo">
+							</div>
+							<h3 class="title__f" role="heading" aria-level="3" >koloarum</h3>
+						</div>
+						<a href="#" class="btn btn-blue">Follow</a>
+					</div>
+					<div class="insta__body">
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+						<div class="insta__pic"><img src="static/img/content/inst-01.jpg" alt="" class="insta__img"></div>
+					</div>
+				</div>
+				{{> socio/socio}}
+			</div>
+		</div>
+	</footer>
+
+	<div class="ppp">
+		<div class="ppp__screen"></div>
+
+		<div class="ppp__body video__body" id="video-01" tabindex="0">
+			<div class="close is-active js-close">
+				<span  class="close__item"></span>
+			</div>
+			<div class="video">
+				<a href="https://youtu.be/3fx3IDazJXI" class="video__link">
+					<picture>
+						<source srcset="https://i.ytimg.com/vi_webp/3fx3IDazJXI/maxresdefault.webp" type="image/webp">
+						<img src="https://i.ytimg.com/vi/3fx3IDazJXI/maxresdefault.jpg" alt="Aloha from Kōloa Rum" class="video__media">
+					</picture>
+				</a>
+				<button class="video__btn" aria-label="play video">
+					<svg class="wall__play video__button-shape" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<polygon id="triangle"  points="55 40.5 30 53 30 28"></polygon>
+							<circle id="oval" stroke-width="2" cx="40" cy="40" r="39"></circle>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsp0mPk9YWoktVHmh7ghwETxNxJT6_BZ4" ></script>
+
+	<script src="static/js/separate-js/jQuery.min.js"></script>
+	<script src="static/js/separate-js/ScrollMagic.min.js"></script>
+	<script src="static/js/separate-js/slick.min.js"></script>
+
+	<script src="static/js/separate-js/gsap/TweenMax.min.js"></script>
+	<script src="static/js/separate-js/gsap/jquery.gsap.min.js"></script>
+	<script src="static/js/separate-js/pixi.min.js"></script>
+
+	<script src="static/js/separate-js/init-animation.js"></script>
+
+	<script src="static/js/main.js"></script>
+	<script src="static/js/separate-js/common.js"></script>
+
 
 </body>
 

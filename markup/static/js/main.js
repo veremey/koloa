@@ -1,7 +1,5 @@
 
 import ImageLoader from './ImageLoad';
-import initanimation from './init-animation';
-
 
 // pixi animations
 var targets = document.querySelectorAll('.js-loadme');

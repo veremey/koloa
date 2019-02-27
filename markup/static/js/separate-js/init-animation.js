@@ -1,51 +1,110 @@
 
-var tl = new TimelineMax();
-
-// onLeave();
 
 
-function initGlobalAnimations(el) {
-	var controller = new ScrollMagic.Controller();
-	var $container = $('.' + el);
+$('.js-cut').each(function(){
+	var text = $(this).html().split(' '),
+		len = text.length,
+		result = [];
 
-	$('.page').addClass('scrollmagic-innited');
-
-	$container.each(function() {
-		var self = this;
-		var height = self.offsetHeight;
-
-		var scene = new ScrollMagic.Scene({
-			triggerElement: self,
-			triggerHook: 0
-		})
-			.setClassToggle(self, 'is-animated')
-			.on('enter leave', function(e){
-				if(e.type == 'enter'){
-					tl
-						.to($container && $('.is-animated'), 1, {y: 0, opacity: 1})
-						.staggerTo($container && $('.is-animated').find('[data-stagger]'), 0.4, {y: 0, opacity: 1}, 0.1);
-				} else {
-					tl
-						.to($container, 0, {y: 50, opacity: 0})
-						.staggerTo($container.find('[data-stagger]'), 0, {y: 30, opacity: 0});
-				}
-			})
-			.addTo(controller);
-
-	});
-
-}
-
-tl
-	.to($('.section'), 0.5, {y: 50, opacity: 0})
-	.to($('[data-stagger]'), 0.4, {y: 30, opacity: 0});
-
-	/*--- global animations init ---*/
-	/*---------------------------------------------------------------------*/
-$(document).ready( function() {
-	initGlobalAnimations('section');
-	initGlobalAnimations('coins');
-
+	for( var i = 0; i < len; i++ ) {
+		result[i] = '<span class="hidden-title" data-stagger><span>' + text[i] + '</span></span>';
+	}
+	$(this).html(result.join(' '));
 });
 
 
+function initGlobalAnimations(container, selfTriggeredElems) {
+	var controller = new ScrollMagic.Controller();
+
+	var $container = $('.' + container);
+	var selfTriggeredElems = selfTriggeredElems;
+
+	var tl = new TimelineMax();
+	var scene;
+
+
+	$('.page').addClass('scrollmagic-innited');
+
+	if($container.hasClass('is-animated')) {
+		$.each(selfTriggeredElems, function(index, value) {
+			$(value.selector).each(function() {
+				new ScrollMagic.Scene({triggerElement: this, triggerHook: value.triggerHook, reverse: false})
+					.setClassToggle(this, value.class)
+					// .addIndicators({name: "2 (duration: 0)"})
+					.addTo(controller);
+			});
+		});
+	}
+}
+
+$(function () {
+	/*--- global animations init ---*/
+	/*---------------------------------------------------------------------*/
+	$(window).on('load', function() {
+
+		var selfTriggeredElems = {
+			el1: {
+				selector: '.logo',
+				triggerHook: 0.7,
+				class: 'is-animated'
+			},
+			el2: {
+				selector: '[data-stagger]',
+				triggerHook: 0.7,
+				class: 'is-animated'
+			}
+		};
+		initGlobalAnimations( 'header', selfTriggeredElems );
+
+		var selfTriggeredElems = {
+			el1: {
+				selector: '[data-stagger]',
+				triggerHook: 0.7,
+				class: 'is-animated'
+			}
+		};
+		initGlobalAnimations( 'startscreen', selfTriggeredElems );
+
+		var selfTriggeredElems = {
+			el1: {
+				selector: '.wall__picture',
+				triggerHook: 1,
+				class: 'is-animated'
+			},
+			el2: {
+				selector: '.btn-play',
+				triggerHook: 0.5,
+				class: 'is-animated'
+			},
+			el3: {
+				selector: '[data-stagger]',
+				triggerHook: .95,
+				class: 'is-animated'
+			}
+		};
+		initGlobalAnimations( 'section', selfTriggeredElems );
+
+		var selfTriggeredElems = {
+			el1: {
+				selector: '[data-stagger]',
+				triggerHook: 0.9,
+				class: 'is-animated'
+			}
+		};
+		initGlobalAnimations( 'coin', selfTriggeredElems );
+
+		var selfTriggeredElems = {
+			el1: {
+				selector: '[data-stagger]',
+				triggerHook: 0.8,
+				class: 'is-animated'
+			}
+		};
+		initGlobalAnimations( 'section_buy ', selfTriggeredElems );
+
+
+
+	});
+
+
+});

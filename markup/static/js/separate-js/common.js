@@ -153,27 +153,29 @@ function scrollToNextSection (){
 }
 
 function showInfo(){
-	$('[data-info]').hover(
-		function(){
+	$('[data-info]').on('click', function(){
 			var showInEl = $(this).data('info');
 			var infoParent = $(this).data('parent');
 			var content = $(this).find('[data-text]').html();
 			var showInfoBox = $(this).parents('.' + infoParent).find('.'+showInEl);
+
+			$('.' + showInEl).removeClass('is-active');
 
 			showInfoBox.html(content);
 			showInfoBox.addClass('is-active');
-		},
-		function(){
-			var showInEl = $(this).data('info');
-			var infoParent = $(this).data('parent');
-			var content = $(this).find('[data-text]').html();
-			var showInfoBox = $(this).parents('.' + infoParent).find('.'+showInEl);
-
-			showInfoBox.html('');
-			showInfoBox.removeClass('is-active');
 		}
 	);
 }
+
+
+$('body').on('click', function(e) {
+	if(!$(e.target).parents('.infobox').length>0 ){
+		var target = $(e.target);
+		$('.infobox').removeClass('is-active');
+		$('.infobox__info').removeClass('is-active');
+	}
+});
+
 
 //* --- youtube video ---*/
 // https://developers.google.com/youtube/iframe_api_reference

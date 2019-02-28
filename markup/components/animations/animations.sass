@@ -1,298 +1,316 @@
-.anim-top-w
-	+ana
 
-.logo
-	opacity: 0
-	+try(-20px)
-	+tr(.4s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
-.nav__item
-	opacity: 0
-	+try(-20px)
-	+tr(.4s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
-.nav__item:nth-of-type(1)
-	+tr(.2s .3s)
-.nav__item:nth-of-type(2)
-	+tr(.2s .5s)
-.nav__item:nth-of-type(3)
-	+tr(.2s .7s)
-.nav__item:nth-of-type(4)
-	+tr(.2s .9s)
-.nav__item:nth-of-type(5)
-	+tr(.2s 1.1s)
-.header
-	.btn
-		opacity: 0
-		+try(-20px)
-		+tr(.4s)
-		&.is-animated
-			opacity: 1
-			+try(0px)
-			.btn
-				&:nth-of-type(1)
-					+tr(.4s .8s)
-				&:nth-of-type(2)
-					+tr(.4s 1s)
+// !!!!!!!!!!!!
 
-.aloha
-	&__title
-		opacity: 0
-		+scale(2)
-		+tr(.4s .2s)
-		&.is-animated
-			opacity: 1
-			+scale(1)
-	&__btns
-		opacity: 0
-		+tr(.8s 1.2s)
-		&.is-animated
-			opacity: 1
+// see fonts.sass
+
+// !!!!!!!!!!!!
+// !!!!!!!!!!!!
+// !!!!!!!!!!!!
+// !!!!!!!!!!!!
 
 
-.hidden-title
-	display: inline-block
-	overflow: hidden
-	span
-		display: inline-block
-		+try(120%)
-		+tr(.8s .6s)
-	&.is-animated span
-		+try(0px)
 
 
-.startscreen__text
-	opacity: 0
-	+try(20px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
-.section .btn
-	opacity: 0
-	+try(20px)
-	+tr(.4s .4s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
-.section .btn-play
-	opacity: 0
-	transform: translate(-36%, -60%)
-	+tr(.4s .4s)
-	+r(1000)
-		transform: translate(50%, -60%)
-	&.is-animated
-		opacity: 1
-		transform: translate(-36%, -50%)
-		+r(1000)
-			transform: translate(50%, -50%)
-.wall_wide .btn-play
-	opacity: 0
-	transform: translate(-50%, -60%)
-	+tr(.4s .4s)
-	+r(1000)
-		transform: translate(-50%, -60%)
-	&.is-animated
-		opacity: 1
-		transform: translate(-50%, -50%)
-		+r(1000)
-			transform: translate(-50%, -50%)
-.startscreen__gallery
-	opacity: 0
-	+try(20px)
-	+tr(.4s .4s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
-.scrolldown
-	opacity: 0
-	transform: translate(-50%, -40px)
-	+tr(.6s .6s)
-	&.is-animated
-		opacity: 1
-		transform: translate(-50%, 0px)
 
-//section
 
-.wall__picture
-	opacity: 0
-	+try(30px)
-	+tr(.4s)
-	&.is-animated
-		opacity: 1
-		transform: translate(0%, 0px)
-.wall_right
-	.wall__content
-		opacity: 0
-		transform: translate(90%, 20px)
-		+tr(.4s .4s)
-		+r(1000)
-			+try(20px)
-		&.is-animated
-			opacity: 1
-			transform: translate(90%, 0px)
-			+r(1000)
-				+try(0px)
-		.title__section
-			+tr(.4s .6s)
-.wall_left
-	.wall__content
-		opacity: 0
-		transform: translate(-90%, 20px)
-		+tr(.4s .4s)
-		+r(1000)
-			+try(20px)
-		&.is-animated
-			opacity: 1
-			transform: translate(-90%, 0px)
-			+r(1000)
-				+try(0px)
-		.title__section
-			+tr(.4s .6s)
-.wall__text
-	opacity: 0
-	+try(30px)
-	+tr(.4s .8s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.wall__arrow
-	opacity: 0
-	+try(30px)
-	+tr(.4s .5s)
-	&_right
-		+tr(.4s .7s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.desc__fb
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.schedule__text
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.title__sh,
-.desc__sh
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-// .wall__dots
+
+
+
+// .anim-top-w
+// 	+ana
+
+// .logo
 // 	opacity: 0
-// 	transform: translate(-50%, 0px)
+// 	+try(-20px)
+// 	+tr(.4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0px)
+// .nav__item
+// 	opacity: 0
+// 	+try(-20px)
+// 	+tr(.4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0px)
+// .nav__item:nth-of-type(1)
+// 	+tr(.2s .3s)
+// .nav__item:nth-of-type(2)
+// 	+tr(.2s .5s)
+// .nav__item:nth-of-type(3)
+// 	+tr(.2s .7s)
+// .nav__item:nth-of-type(4)
+// 	+tr(.2s .9s)
+// .nav__item:nth-of-type(5)
+// 	+tr(.2s 1.1s)
+// .header
+// 	.btn
+// 		opacity: 0
+// 		+try(-20px)
+// 		+tr(.4s)
+// 		&.is-animated
+// 			opacity: 1
+// 			+try(0px)
+// 			.btn
+// 				&:nth-of-type(1)
+// 					+tr(.4s .8s)
+// 				&:nth-of-type(2)
+// 					+tr(.4s 1s)
+
+// .aloha
+// 	&__title
+// 		opacity: 0
+// 		+scale(2)
+// 		+tr(.4s .2s)
+// 		&.is-animated
+// 			opacity: 1
+// 			+scale(1)
+// 	&__btns
+// 		opacity: 0
+// 		+tr(.8s 1.2s)
+// 		&.is-animated
+// 			opacity: 1
+
+
+// .hidden-title
+// 	display: inline-block
+// 	overflow: hidden
+// 	span
+// 		display: inline-block
+// 		+try(120%)
+// 		+tr(.8s .6s)
+// 	&.is-animated span
+// 		+try(0px)
+
+
+// .startscreen__text
+// 	opacity: 0
+// 	+try(20px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0px)
+// .section .btn
+// 	opacity: 0
+// 	+try(20px)
+// 	+tr(.4s .4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0px)
+// .section .btn-play
+// 	opacity: 0
+// 	transform: translate(-36%, -60%)
+// 	+tr(.4s .4s)
+// 	+r(1000)
+// 		transform: translate(50%, -60%)
+// 	&.is-animated
+// 		opacity: 1
+// 		transform: translate(-36%, -50%)
+// 		+r(1000)
+// 			transform: translate(50%, -50%)
+// .wall_wide .btn-play
+// 	opacity: 0
+// 	transform: translate(-50%, -60%)
+// 	+tr(.4s .4s)
+// 	+r(1000)
+// 		transform: translate(-50%, -60%)
+// 	&.is-animated
+// 		opacity: 1
+// 		transform: translate(-50%, -50%)
+// 		+r(1000)
+// 			transform: translate(-50%, -50%)
+// .startscreen__gallery
+// 	opacity: 0
+// 	+try(20px)
+// 	+tr(.4s .4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0px)
+// .scrolldown
+// 	opacity: 0
+// 	transform: translate(-50%, -40px)
+// 	+tr(.6s .6s)
+// 	&.is-animated
+// 		opacity: 1
+// 		transform: translate(-50%, 0px)
+
+// //section
+
+// .wall__picture
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		transform: translate(0%, 0px)
+// .wall_right
+// 	.wall__content
+// 		opacity: 0
+// 		transform: translate(90%, 20px)
+// 		+tr(.4s .4s)
+// 		+r(1000)
+// 			+try(20px)
+// 		&.is-animated
+// 			opacity: 1
+// 			transform: translate(90%, 0px)
+// 			+r(1000)
+// 				+try(0px)
+// 		.title__section
+// 			+tr(.4s .6s)
+// .wall_left
+// 	.wall__content
+// 		opacity: 0
+// 		transform: translate(-90%, 20px)
+// 		+tr(.4s .4s)
+// 		+r(1000)
+// 			+try(20px)
+// 		&.is-animated
+// 			opacity: 1
+// 			transform: translate(-90%, 0px)
+// 			+r(1000)
+// 				+try(0px)
+// 		.title__section
+// 			+tr(.4s .6s)
+// .wall__text
+// 	opacity: 0
+// 	+try(30px)
 // 	+tr(.4s .8s)
 // 	&.is-animated
 // 		opacity: 1
-// 		transform: translate(-50%, -64px)
+// 		+try(0)
+// .wall__arrow
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .5s)
+// 	&_right
+// 		+tr(.4s .7s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// .desc__fb
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// .schedule__text
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// .title__sh,
+// .desc__sh
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// // .wall__dots
+// // 	opacity: 0
+// // 	transform: translate(-50%, 0px)
+// // 	+tr(.4s .8s)
+// // 	&.is-animated
+// // 		opacity: 1
+// // 		transform: translate(-50%, -64px)
 
-.coins__item
-	opacity: 0
-	+try(-20px)
-	+tr(.4s)
-	&.is-animated
-		opacity: 1
-		+try(0)
+// .coins__item
+// 	opacity: 0
+// 	+try(-20px)
+// 	+tr(.4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
 
-.coins__item,
-.list-dots__item
-	&:nth-of-type(1)
-		+tr(.2s .1s)
-	&:nth-of-type(2)
-		+tr(.2s .2s)
-	&:nth-of-type(3)
-		+tr(.2s .3s)
-	&:nth-of-type(4)
-		+tr(.2s .4s)
-	&:nth-of-type(5)
-		+tr(.2s .5s)
-	&:nth-of-type(6)
-		+tr(.2s .6s)
-	&:nth-of-type(7)
-		+tr(.2s .7s)
-	&:nth-of-type(8)
-		+tr(.2s .8s)
-	&:nth-of-type(9)
-		+tr(.2s .9s)
-	&:nth-of-type(10)
-		+tr(.2s 1s)
-	&:nth-of-type(11)
-		+tr(.2s 1.1s)
-	&:nth-of-type(12)
-		+tr(.2s 1.2s)
-	&:nth-of-type(13)
-		+tr(.2s 1.3s)
-	&:nth-of-type(14)
-		+tr(.2s 1.4s)
-	&:nth-of-type(15)
-		+tr(.2s 1.5s)
-	&:nth-of-type(16)
-		+tr(.2s 1.6s)
-	&:nth-of-type(17)
-		+tr(.2s 1.7s)
-	&:nth-of-type(18)
-		+tr(.2s 1.8s)
-	&:nth-of-type(19)
-		+tr(.2s 1.9s)
-	&:nth-of-type(20)
-		+tr(.2s 2s)
+// .coins__item,
+// .list-dots__item
+// 	&:nth-of-type(1)
+// 		+tr(.2s .1s)
+// 	&:nth-of-type(2)
+// 		+tr(.2s .2s)
+// 	&:nth-of-type(3)
+// 		+tr(.2s .3s)
+// 	&:nth-of-type(4)
+// 		+tr(.2s .4s)
+// 	&:nth-of-type(5)
+// 		+tr(.2s .5s)
+// 	&:nth-of-type(6)
+// 		+tr(.2s .6s)
+// 	&:nth-of-type(7)
+// 		+tr(.2s .7s)
+// 	&:nth-of-type(8)
+// 		+tr(.2s .8s)
+// 	&:nth-of-type(9)
+// 		+tr(.2s .9s)
+// 	&:nth-of-type(10)
+// 		+tr(.2s 1s)
+// 	&:nth-of-type(11)
+// 		+tr(.2s 1.1s)
+// 	&:nth-of-type(12)
+// 		+tr(.2s 1.2s)
+// 	&:nth-of-type(13)
+// 		+tr(.2s 1.3s)
+// 	&:nth-of-type(14)
+// 		+tr(.2s 1.4s)
+// 	&:nth-of-type(15)
+// 		+tr(.2s 1.5s)
+// 	&:nth-of-type(16)
+// 		+tr(.2s 1.6s)
+// 	&:nth-of-type(17)
+// 		+tr(.2s 1.7s)
+// 	&:nth-of-type(18)
+// 		+tr(.2s 1.8s)
+// 	&:nth-of-type(19)
+// 		+tr(.2s 1.9s)
+// 	&:nth-of-type(20)
+// 		+tr(.2s 2s)
 
-.map
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.map__location
-	opacity: 0
-	+try(30px)
-	+tr(.4s .4s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-	.title__g
-		opacity: 0
-		+try(30px)
-		+tr(.4s .5s)
-		&.is-animated
-			opacity: 1
-			+try(0)
-.map__address
-	opacity: 0
-	+try(30px)
-	+tr(.4s .6s)
-	&.is-animated
-		opacity: 1
-		+try(0)
+// .map
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// .map__location
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .4s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
+// 	.title__g
+// 		opacity: 0
+// 		+try(30px)
+// 		+tr(.4s .5s)
+// 		&.is-animated
+// 			opacity: 1
+// 			+try(0)
+// .map__address
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .6s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
 
 
-.preview
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
+// .preview
+// 	opacity: 0
+// 	+try(30px)
+// 	+tr(.4s .2s)
+// 	&.is-animated
+// 		opacity: 1
+// 		+try(0)
 
-.list-dots__item
-	opacity: 0
-	+try(30px)
-.list-dots
-	&.is-animated
-		.list-dots__item
-			opacity: 1
-			+try(0)
+// .list-dots__item
+// 	opacity: 0
+// 	+try(30px)
+// .list-dots
+// 	&.is-animated
+// 		.list-dots__item
+// 			opacity: 1
+// 			+try(0)

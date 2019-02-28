@@ -11,6 +11,7 @@
 	+r(600)
 		width: 100%
 	&__face
+		display: block
 		position: relative
 		padding: 0px 0px 20px
 		text-align: center
@@ -34,6 +35,7 @@
 		background-color: #ceb799
 		transform: rotateX(90deg)
 		transform-origin: 0 100%
+		overflow: auto
 		+tr(1s)
 		&:after
 			content: ''
@@ -42,6 +44,15 @@
 			left: 50%
 			+trx(-50%)
 			+arr(15, 10, #ceb799, b)
+		&::-webkit-scrollbar
+			width: 4px
+		&::-webkit-scrollbar-track
+			background: #f1f1f1
+		&::-webkit-scrollbar-thumb
+			background: #888
+			&:hover
+				background-color: #555
+
 		&.is-active
 			top: 5px
 			transform: rotateX(0deg)
@@ -65,7 +76,7 @@
 		display: inline-block
 		vertical-align: top
 		margin-bottom: 15px
-		width: 45%
+		min-width: 45%
 		cursor: pointer
 	&__hidden
 		display: none

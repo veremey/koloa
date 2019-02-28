@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="14px" viewBox="0 0 24 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="0-1-2-Koloa@2x" transform="translate(-1062.000000, -314.000000)" fill="#a8875e" fill-rule="nonzero">
-            <g id="1stblock">
-                <g id="Bottle" transform="translate(824.000000, 112.000000)">
-                    <path d="M241.400741,207.966873 L262,207.966873 L262,209.962224 L241.329285,209.962224 L246,214.596745 L244.585786,216 L238.928932,210.386981 L239.357007,209.962224 L238,209.962224 L238,207.966873 L239.285551,207.966873 L238.928932,207.613019 L244.585786,202 L246,203.403255 L241.400741,207.966873 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg height="14" viewBox="0 0 24 14" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m241.400741 207.966873h20.599259v1.995351h-20.670715l4.670715 4.634521-1.414214 1.403255-5.656854-5.613019.428075-.424757h-1.357007v-1.995351h1.285551l-.356619-.353854 5.656854-5.613019 1.414214 1.403255z" fill="#a8875e" transform="translate(-238 -202)"/></svg>

@@ -209,6 +209,14 @@ p
 			height: auto
 			&_wide
 				height: auto
+	&_lg_autoheight
+		+r(1000)
+			height: auto
+			min-height: 0
+			.layout
+				height: auto
+				&_wide
+					height: auto
 
 .video
 	&__iframe,
@@ -267,7 +275,12 @@ p
 	display: flex
 	align-items: center
 	+r(1000)
-		// flex-direction: column//slider
+		height: auto
+		padding-bottom: 100px!important
+	+r(650)
+		height: auto
+		padding-bottom: 160px!important
+
 	&__header
 		display: flex
 		align-items: center
@@ -304,6 +317,7 @@ p
 		top: 0%
 		bottom: 0%
 		width: 58.33%
+		font-size: 0
 		overflow: hidden
 		+r(1000)
 			position: relative
@@ -345,7 +359,8 @@ p
 			+r(650)
 				margin-top: 0px
 	&__content
-		position: relative
+		// position: relative//todo
+		position: absolute
 		display: inline-block
 		width: 100%
 		max-width: 535px
@@ -355,11 +370,12 @@ p
 		box-shadow: 0 0 34px rgba(0, 0, 0, .2)
 		z-index: 2
 		+r(1000)
-			top: -45px
+			// top: -45px//todo
+			bottom: 0
 			padding: 30px
 			max-width: 96%
 		+r(650)
-			top: -45px
+			// top: -45px//todo
 			padding: 30px 20px
 		&-1
 			background: url('../img/content/wall-bg-01.svg') 0% 0% no-repeat, #fff url('../img/content/wall-bg-021.svg') 100% 100% no-repeat
@@ -376,9 +392,11 @@ p
 			letter-spacing: 0
 			margin-bottom: .8em
 	&__text
-		margin-bottom: 60px
+		margin-bottom: 30px
 		p
 			margin-bottom: 5px
+			color: rgba(0, 0, 0, .7)
+			line-height: 1.8
 	&__arrows
 		position: absolute
 		top: 50%
@@ -386,6 +404,7 @@ p
 		width: 57px
 		font-size: 0
 		+try(-50%)
+		z-index: 10
 		+r(1000)
 			top: 0
 			+try(100%)
@@ -418,8 +437,9 @@ p
 		+r(1000)
 			flex-direction: column
 		.wall__content
-			margin-right: 50%
-			+trx(90%)
+			// margin-right: 50%//todo
+			// +trx(90%)//todo
+			+trx(-30%)
 			+r(1000)
 				margin: 0 auto
 				transform: none
@@ -506,7 +526,7 @@ p
 	width: 100%
 	max-width: 880px
 	margin: 0 auto
-	padding: 60px 0
+	padding: 30px 0
 	text-align: center
 	+r(1000)
 		padding: 0px 20px 40px
@@ -594,7 +614,7 @@ p
 	&__img
 		display: inline-block!important
 		vertical-align: top
-		max-width: 150px
+		max-width: 125px
 	&__name
 		font-size: 20px
 		color: #000

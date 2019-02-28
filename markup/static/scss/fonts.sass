@@ -398,13 +398,15 @@
 .wall_right
 	.wall__content
 		opacity: 0
-		transform: translate(90%, 20px)
+		// transform: translate(90%, 20px)//todo
+		transform: translate(-30%, 20px)
 		+tr(.4s .4s)
 		+r(1000)
 			+try(20px)
 		&.is-animated
 			opacity: 1
-			transform: translate(90%, 0px)
+			// transform: translate(90%, 0px)//todo
+			transform: translate(-30%, 0px)
 			+r(1000)
 				+try(0px)
 		.title__section

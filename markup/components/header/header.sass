@@ -227,6 +227,7 @@
 		+r(1220)
 			margin-bottom: 40px
 	&__item
+		position: relative
 		display: inline-block
 		vertical-align: top
 		margin-left: 40px
@@ -235,6 +236,16 @@
 			text-align: center
 			margin-bottom: 14px
 			margin-left: 0
+		&:hover
+			z-index: 10
+			> .subnav
+				max-height: 1000px
+				+tr(.4s)
+				+r(1200)
+					display: none
+				.nav__item
+					opacity: 1
+					+try(0)
 	&__link
 		display: inline-block
 		position: relative
@@ -261,3 +272,45 @@
 				left: 0
 				width: 100%
 
+.has-subnav
+	> .subnav
+		border-top: 10px solid #fff
+		+r(1200)
+			border-top: 10px solid #000
+
+.subnav
+	max-height: 0
+	position: absolute
+	top: 100%
+	left: 50%
+	+trx(-50%)
+	width: 300px
+	max-width: 90vw
+	background-color: $subnavbg
+	list-style: none
+	overflow: hidden
+	border-color: #fff
+	+tr(.4s)
+	.subnav
+		position: relative
+		max-width: 100%
+		background-color: darken($subnavbg, 5%)
+		border: none
+		+tr(.6s)
+	.nav
+		padding: 10px 5px
+		&__list
+			margin-bottom: 0
+		&__item
+			display: block
+			margin: 0
+		&__link
+			padding: 5px
+			letter-spacing: 0em
+			display: block
+			text-align: center
+			text-decoration: none
+			&:hover
+				background-color: darken($subnavbg, 2%)
+				&:after
+					content: none

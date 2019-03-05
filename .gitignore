@@ -37,6 +37,7 @@ site/lib
 *.todo
 */**/*.todo
 
+builds
 node_modules
 docs
 .DS_Store

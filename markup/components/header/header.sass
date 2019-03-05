@@ -236,12 +236,14 @@
 			text-align: center
 			margin-bottom: 14px
 			margin-left: 0
+			opacity: 1
+			+try(0)
 		&:hover
 			z-index: 10
 			> .subnav
 				max-height: 1000px
 				+tr(.4s)
-				+r(1200)
+				+r(1220)
 					display: none
 				.nav__item
 					opacity: 1
@@ -275,8 +277,8 @@
 .has-subnav
 	> .subnav
 		border-top: 10px solid #fff
-		+r(1200)
-			border-top: 10px solid #000
+		+r(1220)
+			border-top: none
 
 .subnav
 	max-height: 0
@@ -291,12 +293,18 @@
 	overflow: hidden
 	border-color: #fff
 	+tr(.4s)
+	+r(1220)
+		position: relative
+		max-height: none
+		background-color: $n
 	.subnav
 		position: relative
 		max-width: 100%
 		background-color: darken($subnavbg, 5%)
 		border: none
 		+tr(.6s)
+		+r(1220)
+			background-color: $n
 	.nav
 		padding: 10px 5px
 		&__list
@@ -312,5 +320,7 @@
 			text-decoration: none
 			&:hover
 				background-color: darken($subnavbg, 2%)
+				+r(1220)
+					background-color: $n
 				&:after
 					content: none

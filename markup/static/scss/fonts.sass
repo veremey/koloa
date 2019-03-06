@@ -273,13 +273,7 @@
 .anim-top-w
 	+ana
 
-.logo
-	opacity: 0
-	+try(-20px)
-	+tr(.4s)
-	&.is-animated
-		opacity: 1
-		+try(0px)
+.logo,
 .nav__item
 	opacity: 0
 	+try(-20px)
@@ -312,20 +306,20 @@
 					+tr(.4s 1s)
 
 .aloha
-	&__title
+	&__title[data-stagger]
 		opacity: 0
 		+scale(2)
 		+tr(.4s .2s)
 		&.is-animated
 			opacity: 1
 			+scale(1)
-	&__btns
+	&__btns[data-stagger]
 		opacity: 0
 		+tr(.8s 1.2s)
 		&.is-animated
 			opacity: 1
 
-.hidden-title
+.hidden-title[data-stagger]
 	display: inline-block
 	overflow: hidden
 	span
@@ -335,21 +329,21 @@
 	&.is-animated span
 		+try(0px)
 
-.startscreen__text
+.startscreen__text[data-stagger]
 	opacity: 0
 	+try(20px)
 	+tr(.4s .2s)
 	&.is-animated
 		opacity: 1
 		+try(0px)
-.section .btn
+.section .btn[data-stagger]
 	opacity: 0
 	+try(20px)
 	+tr(.4s .4s)
 	&.is-animated
 		opacity: 1
 		+try(0px)
-.section .btn-play
+.section .btn-play[data-stagger]
 	opacity: 0
 	transform: translate(-36%, -60%)
 	+tr(.4s .4s)
@@ -360,7 +354,7 @@
 		transform: translate(-36%, -50%)
 		+r(1000)
 			transform: translate(50%, -50%)
-.wall_wide .btn-play
+.wall_wide .btn-play[data-stagger]
 	opacity: 0
 	transform: translate(-50%, -60%)
 	+tr(.4s .4s)
@@ -371,14 +365,14 @@
 		transform: translate(-50%, -50%)
 		+r(1000)
 			transform: translate(-50%, -50%)
-.startscreen__gallery
+.startscreen__gallery[data-stagger]
 	opacity: 0
 	+try(20px)
 	+tr(.4s .4s)
 	&.is-animated
 		opacity: 1
 		+try(0px)
-.scrolldown
+.scrolldown[data-stagger]
 	opacity: 0
 	transform: translate(-50%, -40px)
 	+tr(.6s .6s)
@@ -388,7 +382,7 @@
 
 //section
 
-.wall__picture
+.wall__picture[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s)
@@ -396,7 +390,7 @@
 		opacity: 1
 		transform: translate(0%, 0px)
 .wall_right
-	.wall__content
+	.wall__content[data-stagger]
 		opacity: 0
 		// transform: translate(90%, 20px)//todo
 		transform: translate(-30%, 20px)
@@ -412,7 +406,7 @@
 		.title__section
 			+tr(.4s .6s)
 .wall_left
-	.wall__content
+	.wall__content[data-stagger]
 		opacity: 0
 		transform: translate(-90%, 20px)
 		+tr(.4s .4s)
@@ -425,14 +419,14 @@
 				+try(0px)
 		.title__section
 			+tr(.4s .6s)
-.wall__text
+.wall__text[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .8s)
 	&.is-animated
 		opacity: 1
 		+try(0)
-.wall__arrow
+.wall__arrow[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .5s)
@@ -441,22 +435,10 @@
 	&.is-animated
 		opacity: 1
 		+try(0)
-.desc__fb
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.schedule__text
-	opacity: 0
-	+try(30px)
-	+tr(.4s .2s)
-	&.is-animated
-		opacity: 1
-		+try(0)
-.title__sh,
-.desc__sh
+.desc__fb[data-stagger],
+.schedule__text[data-stagger],
+.title__sh[data-stagger],
+.desc__sh[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .2s)
@@ -464,9 +446,9 @@
 		opacity: 1
 		+try(0)
 
-.title__section,
-.title__pbb,
-.coins__item
+.title__section[data-stagger],
+.title__pbb[data-stagger],
+.coins__item[data-stagger]
 	opacity: 0
 	+try(-20px)
 	+tr(.4s)
@@ -474,8 +456,8 @@
 		opacity: 1
 		+try(0)
 
-.coins__item,
-.list-dots__item
+.coins__item[data-stagger],
+.list-dots__item[data-stagger]
 	&:nth-of-type(1)
 		+tr(.2s .1s)
 	&:nth-of-type(2)
@@ -517,28 +499,28 @@
 	&:nth-of-type(20)
 		+tr(.2s 2s)
 
-.map
+.map[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .2s)
 	&.is-animated
 		opacity: 1
 		+try(0)
-.map__location
+.map__location[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .4s)
 	&.is-animated
 		opacity: 1
 		+try(0)
-	.title__g
+	.title__g[data-stagger]
 		opacity: 0
 		+try(30px)
 		+tr(.4s .5s)
 		&.is-animated
 			opacity: 1
 			+try(0)
-.map__address
+.map__address[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .6s)
@@ -546,7 +528,7 @@
 		opacity: 1
 		+try(0)
 
-.preview
+.preview[data-stagger]
 	opacity: 0
 	+try(30px)
 	+tr(.4s .2s)
@@ -554,7 +536,7 @@
 		opacity: 1
 		+try(0)
 
-.list-dots__item
+.list-dots__item[data-stagger]
 	opacity: 0
 	+try(30px)
 .list-dots

@@ -1,6 +1,6 @@
 # KOLOA RUM CO.
 
-## If you want to add changes to this project please folow this steps
+If you want to add changes to this project, please folow this steps
 
 ## Installation
 
@@ -19,7 +19,9 @@ Command is run from a project folder with `package.json`  file.
 npm install
 ```
 
-In tars-master remove  ` markup `. Put here path from Aero project
+```bash
+npm install gulp
+```
 
 ```bash
 gulp init

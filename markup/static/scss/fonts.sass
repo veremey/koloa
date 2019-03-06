@@ -393,16 +393,18 @@
 	.wall__content[data-stagger]
 		opacity: 0
 		// transform: translate(90%, 20px)//todo
-		transform: translate(-30%, 20px)
+		left: 50%
+		transform: translate(-40px, 20px)
 		+tr(.4s .4s)
 		+r(1000)
 			+try(20px)
+			left: 0
 		&.is-animated
 			opacity: 1
 			// transform: translate(90%, 0px)//todo
-			transform: translate(-30%, 0px)
+			transform: translate(-40px, 0px)
 			+r(1000)
-				+try(0px)
+				+try(-40px)
 		.title__section
 			+tr(.4s .6s)
 .wall_left
@@ -416,7 +418,7 @@
 			opacity: 1
 			transform: translate(-90%, 0px)
 			+r(1000)
-				+try(0px)
+				+try(-40px)
 		.title__section
 			+tr(.4s .6s)
 .wall__text[data-stagger]

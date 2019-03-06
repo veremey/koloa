@@ -2180,6 +2180,15 @@ p {
   height: auto;
 }
 
+.section_autoheight .full__img {
+  position: static;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  min-height: 0;
+}
+
 @media only screen and (max-width: 1000px) {
   .section_lg_autoheight {
     height: auto;

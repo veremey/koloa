@@ -287,6 +287,7 @@ function slickWall(el){
 			dots: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+			adaptiveHeight: true,
 			arrows: true,
 			focusOnSelect: true,
 			prevArrow: $(el).find('.wall__arrow_left'),

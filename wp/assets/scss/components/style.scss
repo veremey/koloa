@@ -113,3 +113,8 @@
     }
 
 }
+.list-dots__item[data-stagger].is-animated{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}

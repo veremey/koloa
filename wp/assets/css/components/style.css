@@ -101,4 +101,9 @@
 .scnt_frm_wrapper .gform_footer {
   float: left; }
 
+.list-dots__item[data-stagger].is-animated {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+
 /*# sourceMappingURL=style.css.map */

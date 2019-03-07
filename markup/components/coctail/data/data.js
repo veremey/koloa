@@ -96,7 +96,7 @@ var data = {coctail: {
 				ml: '4 oz.',
 				desc: 'Good quality chocolate bar <span>(dark 65-75%, or milk)</span> roughly chopped'
 			}, {
-				ml: '4 Tbps',
+				ml: '4 tbps',
 				desc: 'Brown sugar <span>(can add more if a sweeter drink is desired)<span>'
 			}, {
 				ml: '12 oz.',
@@ -119,7 +119,7 @@ var data = {coctail: {
 				ml: '2 oz.',
 				desc: 'Kōloa Gold Rum'
 			}, {
-				ml: '2 Tbps',
+				ml: '2 tbps',
 				desc: 'Roasted Pineapple Diced'
 			}, {
 				ml: '3-4',

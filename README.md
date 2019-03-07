@@ -1,6 +1,6 @@
 # KOLOA RUM CO.
 
-## If you want to add changes to this project please folow this steps
+If you want to add changes to this project, please folow this steps
 
 ## Installation
 
@@ -19,10 +19,16 @@ Command is run from a project folder with `package.json`  file.
 npm install
 ```
 
-In tars-master remove  ` markup `. Put here path from Aero project
+```bash
+npm install gulp
+```
 
 ```bash
-gulp init
+npm install
+```
+
+```bash
+npm install autoprefixer babel-loader browser-sync comment-json del gulp gulp-cached gulp-changed gulp-compile-handlebars  gulp-concat gulp-data gulp-if gulp-imagemin gulp-importify gulp-notify gulp-plumber gulp-postcss gulp-rename gulp-replace-task gulp-sass gulp-sourcemaps gulp-svg-spritesheet gulp.spritesmith ncp run-sequence source-map-loader stream-combiner webpack webpack-glsl-loader
 ```
 
 ## Start whith
@@ -31,5 +37,7 @@ gulp init
 
 All changes do in `markup` path.
 Thay automatically compilled in `dev` path
+
+Open `markup/static/scss/common.sass` and save this file to see how compiled CSS
 
 Enjoy yourself!

@@ -55,12 +55,7 @@ global $thm_data;
                                 );
                             }
                             ?>
-
-
                         </nav>
-
-
-
                         <div class="header__btns">
                             <?php if ($dist_btn = get_field('hd_btn_1', 'option')) { ?>
                                 <a href="<?php echo $dist_btn['url']; ?>" class="btn btn-white" data-stagger ><?php echo $dist_btn['title']; ?></a> 

@@ -1,0 +1,104 @@
+/*spinner*/
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.gform_wrapper .gform_ajax_spinner {
+  border: 4px solid rgba(50, 50, 50, 0.1);
+  border-left: 4px solid #56565a;
+  animation: spinner 1.1s infinite linear;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute; }
+
+.desc__f p {
+  color: #6e6e6e;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 2em; }
+
+/*gform*/
+.gform_wrapper ul {
+  padding: 0;
+  margin: 0; }
+  .gform_wrapper ul li {
+    padding: 0;
+    list-style: none;
+    margin: 0; }
+
+.connect__form .gform_confirmation_message {
+  color: #268276;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: 'Roboto-Bold', Arial, sans-serif; }
+
+.scnt_frm_wrapper .validation_error, .scnt_frm_wrapper .gfield_label {
+  display: none; }
+.scnt_frm_wrapper .scnt_frm {
+  position: relative; }
+  .scnt_frm_wrapper .scnt_frm:after {
+    content: "";
+    clear: both;
+    display: table; }
+.scnt_frm_wrapper .gform_body {
+  width: 70%;
+  width: -moz-calc(calc(100% - 130px));
+  width: -webkit-calc(calc(100% - 130px));
+  width: -o-calc(calc(100% - 130px));
+  width: calc(calc(100% - 130px));
+  float: left; }
+  .scnt_frm_wrapper .gform_body input {
+    height: 48px;
+    border: none;
+    border-radius: 0;
+    line-height: 48px;
+    padding: 4px 14px;
+    font-size: 16px;
+    color: #000;
+    background-color: #F5F5F6; }
+.scnt_frm_wrapper .gfield_description.validation_message {
+  position: absolute;
+  color: #f90000;
+  bottom: -20px;
+  font-size: 14px; }
+.scnt_frm_wrapper .gform_ajax_spinner {
+  top: 50%;
+  margin: -10px 0 0 0;
+  right: -25px; }
+.scnt_frm_wrapper .gform_footer {
+  float: left; }
+
+/*# sourceMappingURL=style.css.map */

@@ -4,13 +4,6 @@ $thm_data['temp_dir_url'] = get_template_directory_uri();
 $thm_data['dev_dir_url'] = content_url('/themes/koloa-rum/dev/static/');
 $thm_data['top_logo'] = get_field('top_logo', 'option');
 $thm_data['fevicon'] = get_field('fevicon', 'option');
-
-$thm_data['ftr_logo'] = get_field('kr_ftr_logo', 'option');
-
-$thm_data['twt_url'] = get_field('kr_twt_url', 'option');
-$thm_data['inst_url'] = get_field('kr_inst_url', 'option');
-$thm_data['fb_url'] = get_field('kr_fb_url', 'option');
-$thm_data['pint_url'] = get_field('kr_pint_url', 'option');
 $thm_data['site_url'] = get_site_url();
 $thm_data['site_name'] = get_bloginfo('name');
 
@@ -33,6 +26,17 @@ if (!function_exists('kr_setup')) {
         add_theme_support('post-thumbnails');
 //full Image size
         add_image_size('full', 9999, 9999, true);
+        
+        
+//rum archive Image size
+        add_image_size('rum-arc', 100, 210, true);
+//rum home hero Image size
+        add_image_size('rum-home-hero', 250, 735, true);
+//rum home product sec Image size
+        add_image_size('rum-home-prd', 125, 375, true);
+//award Image size
+        add_image_size('award-madal', 152, 152, true);
+        
 // This theme uses wp_nav_menu() in header menu location.
         register_nav_menus(array(
             'header_menu' => __('Top nav menu', 'kn'),
@@ -69,8 +73,9 @@ function scripts() {
     //styles
     wp_enqueue_style('first', $thm_data['dev_dir_url'] . 'css/separate-css/first.css', array(), '1', 'all');
     wp_enqueue_style('main', $thm_data['dev_dir_url'] . 'css/main.css', array(), '1', 'all');
-    //scripts
-    wp_enqueue_script('gmap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsp0mPk9YWoktVHmh7ghwETxNxJT6_BZ4', array(), '1', true);
+    wp_enqueue_style('wpmain', get_template_directory_uri() . '/assets/css/main.css', array(), '1', 'all');    
+//scripts
+    //wp_enqueue_script('gmap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsp0mPk9YWoktVHmh7ghwETxNxJT6_BZ4', array(), '1', true);
     wp_enqueue_script('jQuery', $thm_data['dev_dir_url'] . 'js/separate-js/jQuery.min.js', array('jquery'), '1', true);
     wp_enqueue_script('ScrollMagic', $thm_data['dev_dir_url'] . 'js/separate-js/ScrollMagic.min.js', array('jquery'), '1', true);
     wp_enqueue_script('slick', $thm_data['dev_dir_url'] . 'js/separate-js/slick.min.js', array('jquery'), '1', true);
@@ -79,7 +84,7 @@ function scripts() {
     wp_enqueue_script('pixi', $thm_data['dev_dir_url'] . 'js/separate-js/pixi.min.js', array('jquery'), '1', true);
     wp_enqueue_script('animation', $thm_data['dev_dir_url'] . 'js/separate-js/init-animation.js', array('jquery'), '1', true);
     wp_enqueue_script('main', $thm_data['dev_dir_url'] . 'js/main.js', array('jquery'), '1', true);
-    wp_enqueue_script('common', $thm_data['dev_dir_url'] . 'js/separate-js/common.js', array('jquery'), '1', true);
+    wp_enqueue_script('commonjs', $thm_data['dev_dir_url'] . 'js/separate-js/common.js', array('jquery'), '1', true);
 }
 
 add_action('wp_enqueue_scripts', 'scripts');
@@ -233,3 +238,8 @@ function placeholder_image($echo = true) {
 }
 // disable srcset on frontend
 add_filter('max_srcset_image_width', create_function('', 'return 1;'));
+/*stay connected form*/
+add_filter( 'gform_submit_button_1', 'form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+    return "<button class='btn connect__btn anim-buble' id='gform_submit_button_{$form['id']}'>subscribe</button>";
+}

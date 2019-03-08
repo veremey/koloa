@@ -87,11 +87,12 @@ function scripts() {
     wp_enqueue_script('gsap', $thm_data['dev_dir_url'] . 'js/separate-js/gsap/jquery.gsap.min.js', array('jquery'), '1', true);
     wp_enqueue_script('pixi', $thm_data['dev_dir_url'] . 'js/separate-js/pixi.min.js', array('jquery'), '1', true);
     wp_enqueue_script('animation', $thm_data['dev_dir_url'] . 'js/separate-js/init-animation.js', array('jquery'), '1', true);
-    wp_enqueue_script('main', $thm_data['dev_dir_url'] . 'js/main.js', array('jquery'), '1', true);
+    wp_enqueue_script('main', $thm_data['dev_dir_url'] . 'js/main.js', array('jquery','plugins'), '1', true);
     wp_enqueue_script('commonjs', $thm_data['dev_dir_url'] . 'js/separate-js/common.js', array('jquery'), '1', true);
     if (is_single()) {
         wp_enqueue_script('sharethis', '//platform-api.sharethis.com/js/sharethis.js#property=5c81f3dadf6421001143b5c9&product=custom-share-buttons', array(), '1', false);
     }
+    wp_enqueue_script('plugins', $thm_data['temp_dir_url'] . '/assets/js/plugins.js', array('jquery'), '1', true);
     wp_enqueue_script('wpapp', $thm_data['temp_dir_url'] . '/assets/js/app.js', array('jquery'), '1', true);
 }
 
@@ -251,9 +252,12 @@ function placeholder_image($echo = true) {
 add_filter('max_srcset_image_width', create_function('', 'return 1;'));
 /* stay connected form */
 add_filter('gform_submit_button_1', 'form_submit_button', 10, 2);
-
 function form_submit_button($button, $form) {
     return "<button class='btn connect__btn anim-buble' id='gform_submit_button_{$form['id']}'>subscribe</button>";
+}
+add_filter('gform_submit_button_2', 'form_submit_button_2', 10, 2);
+function form_submit_button_2($button, $form) {
+    return "<button class='btn btn-border' id='gform_submit_button_{$form['id']}' data-stagger>send</button>";
 }
 
 //talk story

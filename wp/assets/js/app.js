@@ -69,7 +69,6 @@
         })
     }
 
-    console.log('test');
     /*pagination*/
     jQuery(".rppagers").on("click", "a", function (k) {
         k.preventDefault();
@@ -116,7 +115,7 @@
         e.stopPropagation();
     });
 
-    $(document).on('page-loaded', function () {
+    function InitAnimate() {
         var selfTriggeredElems = {
             el2: {
                 selector: '[data-stagger]',
@@ -125,7 +124,16 @@
             }
         };
         initGlobalAnimations('header', selfTriggeredElems);
+    }
+    $(document).on('page-loaded', function () {
+        InitAnimate();
     });
 
+    $(document).on('gform_post_render', function () {
+        if($('.contact').length){
+            $('#gform_submit_button_2').addClass('is-animated');
+        }
+        selection();
+    });
 
 })(jQuery);

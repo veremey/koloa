@@ -90,16 +90,21 @@ get_header();
             </button>
         </div>
         <div class="wall__content wall__content-1 " data-stagger >
-            <h2 class="title__section" role="heading" aria-level="2"  data-stagger><?php the_field('hm_abt_title'); ?></h2>
-            <div class="wall__text"  data-stagger>
-                <p class="desc__f"><?php the_field('hm_abt_desc'); ?></p>
+            <div class="wall__content_item">
+                <div class="wall__content_bg">
+                    <div class="top-left js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-01.svg" style="height: 100px; "></div>
+                    <div class="bottom-right js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-021.svg" style="height: 100px; "></div>
+                </div>
+                <h2 class="title__section" role="heading" aria-level="2"  data-stagger ><?php the_field('hm_abt_title'); ?></h2>
+                <div class="wall__text"  data-stagger>
+                    <p class="desc__f"><?php the_field('hm_abt_desc'); ?></p>
+                </div>
+                <?php
+                if ($link = get_field('hm_abt_btn')) {
+                    echo '<a href="' . $link['url'] . '" class="btn btn-border" data-stagger>' . $link['title'] . '</a>';
+                }
+                ?>
             </div>
-
-            <?php
-            if ($link = get_field('hm_abt_btn')) {
-                echo '<a href="' . $link['url'] . '" class="btn btn-border" data-stagger>' . $link['title'] . '</a>';
-            }
-            ?>
         </div>
     </div>
 </div>
@@ -142,6 +147,12 @@ get_header();
                                                 <?php foreach ($unq_slider as $unq_slide) {
                                                     ?>
                                                     <div class="wall__content_item">
+
+                                                        <div class="wall__content_bg">
+                                                            <div class="top-right js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-03.svg" style="height: 100px; "></div>
+                                                            <div class="bottom-left js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-04.svg" style="height: 100px; "></div>
+                                                        </div>
+
                                                         <h2 class="title__section" role="heading" aria-level="2"  data-stagger >
                                                             <?php echo $unq_slide['title']; ?>
                                                         </h2>
@@ -255,17 +266,17 @@ get_header();
                                 <div class="layout_wide">
                                     <?php if ($hm_rm_slider = get_field('hm_rm_slider')) { ?>
                                         <div class="wall wall_left wall-02">
-
                                             <div class="wall__content wall__content-2"  data-stagger>
                                                 <?php foreach ($hm_rm_slider as $hm_rm_slide) {
                                                     ?>
                                                     <div class="wall__content_item"  data-stagger >
+                                                        <div class="wall__content_bg">
+                                                            <div class="top-right js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-03.svg" style="height: 100px; "></div>
+                                                            <div class="bottom-left js-loadme" data-src="<?php echo $thm_data['dev_dir_url']; ?>/img/content/wall-bg-04.svg" style="height: 100px; "></div>
+                                                        </div>
                                                         <h2 class="title__section mod-uppercase" role="heading" aria-level="2"  data-stagger >
                                                             <?php echo $hm_rm_slide['title']; ?>
                                                         </h2>
-                                                        <div class="wall__dots" >
-                                                            <!-- dots -->
-                                                        </div>
                                                         <div class="wall__text"  data-stagger >
                                                             <p class="desc__f"><?php echo $hm_rm_slide['content']; ?></p>
                                                         </div>
@@ -312,18 +323,19 @@ get_header();
                                             ?>
                                             <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="wall__img">
                                         </div>
-
                                         <div class="wall__content"  data-stagger >
-                                            <h2 class="title__section" role="heading" aria-level="2"  data-stagger>
-                                                <?php the_field('hm_tr_ttl'); ?>
-                                            </h2>
-                                            <div class="wall__text" data-stagger >
-                                                <p class="desc__f"><?php the_field('hm_tr_cont'); ?></p>
+                                            <div class="wall__content_item">
+                                                <h2 class="title__section" role="heading" aria-level="2"  data-stagger>
+                                                    <?php the_field('hm_tr_ttl'); ?>
+                                                </h2>
+                                                <div class="wall__text" data-stagger >
+                                                    <p class="desc__f"><?php the_field('hm_tr_cont'); ?></p>
+                                                </div>
+                                                <?php
+                                                $hm_tr_btn = get_field('hm_tr_btn');
+                                                echo '<a href="' . $hm_tr_btn['url'] . '" class="btn btn-border" data-stagger >' . $hm_tr_btn['title'] . '</a>';
+                                                ?>
                                             </div>
-                                            <?php
-                                            $hm_tr_btn = get_field('hm_tr_btn');
-                                            echo '<a href="' . $hm_tr_btn['url'] . '" class="btn btn-border" data-stagger >' . $hm_tr_btn['title'] . '</a>';
-                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -339,7 +351,7 @@ get_header();
                                             </li>
                                         <?php } ?>
                                     </ul>
-                                <?php
+                                    <?php
                                 }
                                 if ($button = get_field('hm_aw_btn')) {
                                     ?>
@@ -352,24 +364,27 @@ get_header();
                                 <div class="layout_wide">
                                     <div class="wall wall_left wall_wide  wall_autoheight ">
                                         <div class="wall__content" data-stagger>
-                                            <h2 class="title__section" role="heading" aria-level="2" data-stagger >
-                                                <?php the_field('hm_bd_ttl');?>
-                                            </h2>
-                                            <div class="wall__text" data-stagger>
-                                                <p class="desc__r"><?php the_field('hm_bd_cont');?></p>
+                                            <div class="wall__content_item">
+                                                <h2 class="title__section" role="heading" aria-level="2" data-stagger >
+                                                    <?php the_field('hm_bd_ttl'); ?>
+                                                </h2>
+                                                <div class="wall__text" data-stagger>
+                                                    <p class="desc__r"><?php the_field('hm_bd_cont'); ?></p>
+                                                </div>
+                                                <?php
+                                                $button = get_field('hm_bd_btn');
+                                                if ($button) {
+                                                    ?>
+                                                    <a href="<?php echo $button['url']; ?>" class="btn btn-border" data-stagger><?php echo $button['title']; ?></a>
+                                                <?php }
+                                                ?>
                                             </div>
-                                            <?php
-                                            $button = get_field('hm_bd_btn');
-                                            if ($button) {                                                ?>
-                                                <a href="<?php echo $button['url'];?>" class="btn btn-border" data-stagger><?php echo $button['title'];?></a>
-                                            <?php }
-                                            ?>
                                         </div>
                                         <div class="wall__picture  ">
                                             <?php
                                             $hm_bd_img = get_field('hm_bd_img');
                                             ?>
-                                            <img src="<?php echo $hm_bd_img['url'];?>" alt="<?php echo $hm_bd_img['alt'];?>" class="wall__img">
+                                            <img src="<?php echo $hm_bd_img['url']; ?>" alt="<?php echo $hm_bd_img['alt']; ?>" class="wall__img">
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /home/ubuntu/codedeploy-koloarum
+permissions:
+  - object: /home/ubuntu/codedeploy-koloarum/deploy
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
+hooks:
+   BeforeInstall:
+    - location: deploy/stop_server.sh
+      runas: root
+   AfterInstall:
+    - location: deploy/change_permissions.sh
+      runas: root

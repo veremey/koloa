@@ -110,35 +110,6 @@ dt {
 dd {
     margin-bottom: 24px;
 }
-
-ul,
-ol {
-    list-style: none;
-    margin: 0 0 24px 20px;
-}
-
-ul {
-    list-style: disc;
-    li {
-        margin-bottom: 10px;
-    }
-}
-
-ol {
-    list-style: decimal;
-}
-
-li > ul,
-li > ol {
-    margin: 0 0 0 20px;
-}
-
-img {
-    -ms-interpolation-mode: bicubic;
-    border: 0;
-    vertical-align: middle;
-}
-
 figure {
     margin: 0;
 }
@@ -153,25 +124,18 @@ fieldset {
 legend {
     white-space: normal;
 }
-p > embed,
-p > iframe,
-p > object,
-span > embed,
-span > iframe,
-span > object {
-    margin-bottom: 0;
-}
 
 /* Alignment */
 
 .alignleft {
     float: left;
+    margin: 0 20px 15px 0;
 }
 
 .alignright {
     float: right;
+    margin: 0 20px 0 15px;
 }
-
 .aligncenter {
     display: block;
     margin-left: auto;
@@ -217,7 +181,6 @@ img.aligncenter,
 .site-content blockquote.alignright p {
     margin-bottom: 17px;
 }
-
 .wp-caption {
     margin-bottom: 24px;
 }
@@ -225,14 +188,4 @@ img.aligncenter,
 .wp-caption img[class*="wp-image-"] {
     display: block;
     margin: 0;
-}
-
-.wp-caption {
-    color: #767676;
-}
-strong,b{
-    font-weight: bold;
-}
-em,i{
-    font-style: italic;
 }

@@ -1,7 +1,5 @@
 # KOLOA RUM CO.
 
-<<<<<<< HEAD
-=======
 If you want to add changes to this project, please folow this steps
 
 ## Installation
@@ -43,4 +41,3 @@ Thay automatically compilled in `dev` path
 Open `markup/static/scss/common.sass` and save this file to see how compiled CSS
 
 Enjoy yourself!
->>>>>>> 0429c86344622f49b594e114fa9da65161e24ea2
